@@ -1,0 +1,407 @@
+/* Container for everything except footer*/
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	margin-bottom: 5%;
+}
+
+/*EL's colour choice*/
+body {
+	background-color: #F2E6FF;
+	width: 414px;
+	height: 73px;
+
+}
+
+.navbar {
+    position: relative;
+    padding: 0;
+    min-height: 170px;
+    width: 100%;
+    background-color: #F2E6FF;
+
+}
+
+.navbar-text h4{
+	margin-top:1%;
+}
+
+/*Dropdown menu button*/
+#dropdownMenu1 {
+	position: absolute;
+	margin-top: 2%;
+	padding: none;
+	background-color: #f5effc;
+	border-color: #8c8c8c;
+	box-shadow: -3px 3px 6px rgba(0,0,0,.175);
+}
+
+#dropdownMenu1:hover {
+	background-color: white;
+	color: black;
+}
+
+#dropdownMenu1:active {
+	box-shadow: inset 3px 3px 1px #666;
+}
+
+/*Dropdown menu list [Home, My Collection, Account, Sign Out] */
+.dropdown-menu {
+	background-color: #f5effc;
+	position: absolute;
+	margin-top: 3%;
+	font-family: Raleway;
+}
+
+.dropdown-menu li:hover {
+	border-top: solid thin;
+	border-bottom: solid thin;
+	border-left: none;
+	border-right: none;
+	border-color: #b2b2b2;
+}
+
+.dropdown-menu a:active {
+	box-shadow: inset 3px 3px 1px #666;
+}
+
+/*Contains dropdown menu, logo, search welcome */
+.navbar-header {
+    float: left;
+    padding: 0;
+    width: 100%;
+}
+
+/* The logo */
+.navbar-brand {
+	display: block;
+	left: 50%;
+	top:65%;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	text-align: justify;
+}
+
+
+/*The logo's caption [MOOD RADIO]*/
+.navbar-brand .caption {
+	left: -40%;
+	top: -40%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	font-family: Racing Sans One;
+	font-style: Regular;
+	font-weight: 2%;
+	letter-spacing: 2%;
+	color: black;
+	text-shadow: 2px 2px 3px #888;
+}
+
+.caption h2{
+	font-size: 120%;
+}
+
+/* Logo's image */
+.navbar-brand img {
+	display: block;
+	height: auto;
+	position: relative;
+	width: 30px;
+}
+
+/* The search bar */
+.navbar-header .input-group {
+	margin-top: 13%;
+	right: 0%;
+	padding: 0;
+	position: relative;
+	width: 45%;
+	font-family: Raleway;
+	background-color: #f5effc;
+	
+}
+
+/* Search bar input part */
+.navbar-header .form-control {
+	border-color: #b2b2b2;
+	background-color: #f5effc;
+	box-shadow: inset 0px 0px 4px #b2b2b2;
+}
+
+.navbar-header .form-control:hover {
+	background-color: white;
+	box-shadow: 0px 0px 10px #a4f5f9;
+}
+
+/* Search button*/
+.navbar-header .input-group .btn-default {
+	border-color: #b2b2b2;
+	background-color: #f5effc;
+	box-shadow: inset 0px 0px 6px #b2b2b2;
+}
+
+.navbar-header .input-group .btn-default:hover {
+	background-color: white;
+	color: black;
+	box-shadow: inset 0px 0px 3px #b2b2b2;
+}
+
+.navbar-header .input-group .btn-default:active {
+	box-shadow: inset 3px 3px 1px #666;
+}
+
+/* Welcome Team25 */
+.navbar-text {
+	right: 0.01%;
+	padding: none;
+	position: absolute;
+	font-family: Raleway;
+	font-style: Light;
+	font-size: 23px;
+	letter-spacing: 2%;
+}
+
+.navbar-text h4 {
+	color: #686868;
+}
+
+/*search results*/
+.main .search-results {
+	position: absolute;
+	display: inline-block;
+	margin-top: 5%;
+	width: 85%;
+	height: auto;
+	left: 1.2%;
+}
+
+.thumbnails img{
+	width:auto;
+	height:auto;
+
+}
+
+.thumbnails{
+	width:50%;
+	height:90%;
+
+}
+
+/*search results thumbnails list with description*/
+.main .search-results .thumbnails {
+	position: relative;
+	list-style-type: none;
+	display: inline-block;
+	right: 5%;
+}
+
+
+/*search results thumbnail*/
+.main .thumbnail {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+}
+
+/*search results thumbnail image*/
+.main .thumbnail img {
+	position: relative;
+	float: left;
+	width: 30%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-shadow: 3px 3px 3px #555;
+}
+
+/*playlist title and creator's name*/
+.thumbnails .caption {
+	position: relative;
+	left: 66%;
+	bottom: 100%;
+	height: 122px;
+	width: 50%;
+	padding: 0;
+	background-color: #F2E6FF;
+	font-family: Raleway;
+}
+
+/*mood, music tags related to respective playlist*/
+.thumbnails .caption .tags {
+	position: relative;
+	display: inline-block;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	height: 40%;
+	line-height: 90%;
+	width: auto;
+	overflow-y: hidden;
+	scroll-behavior: smooth;
+	width: auto;
+}
+
+.thumbnails .caption .tags:hover {
+	overflow-y: auto;
+	scroll-behavior: smooth;
+}
+.thumbnails .caption .tags p {
+	font-size: 85%;
+	overflow-y: auto;
+	box-sizing: content-box;
+}
+
+/*link to creator's profile*/
+.thumbnails .caption a {
+	color: #333;
+	word-wrap: break-word;
+}
+
+/*the preview link for viewing the playlist's songs*/
+.thumbnails .caption .preview {
+	position: relative;
+	font-size: 85%;
+	bottom: 0;
+}
+
+.thumbnails .caption a:hover {
+	color: #9131f7;
+}
+
+.thumbnails .caption a:focus {
+	color: #9131f7;
+}
+
+.thumbnails .caption h4 {
+	font-size: 90%;
+	margin-top: 0;
+	top: 0;
+}
+
+/*play button on all thumbnails*/
+.play {
+	display: block;
+	position: absolute;
+	top: 25%;
+	left: 26%;
+	width: auto;
+	height: auto;
+	margin: 0;
+	text-align: center;
+	font-size: 400%;
+	filter: opacity(60%);
+	z-index: 87;
+}
+
+.thumbnail:hover .play{
+	display: block;
+}
+
+.play:hover {
+	filter: opacity(100%);
+	filter: brightness(110%);
+}
+
+.play a {
+	background: none;
+	border: none;
+	padding: 0;
+	width: auto;
+	height: auto;
+	margin: 0;
+	color: #d3d3d3;
+}
+
+
+
+
+/* Contains social media, player widget, languages */
+.footer {
+	/*margin-left: -3.7%;*/
+	/*padding-bottom: -2%;*/
+	position: relative;
+	width: 100%;
+	height: 5%;
+	display: inline;
+	vertical-align: middle;
+}
+
+.footer .row {
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.footer ul {
+	position: relative;
+	list-style-type: none;
+	display: inline-flex;
+	vertical-align: middle;
+	padding: 0;
+	margin: 0;
+}
+
+/* facebook, twitter etc*/
+.footer .social {
+	position: relative;
+	padding-left: 0.8%;
+	height: auto;
+	width: 15%;
+}
+
+.footer .social > li {
+	position: relative;
+	display: inline;
+}
+
+.footer .social a {
+	padding: 0;
+	margin: 0;
+}
+
+.footer .social .thumbnail {
+	width: 100%;
+	height: auto;
+	float: left;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0;
+	border: 0;
+	background-color: #F2E6FF;
+}
+
+/* greek, english */
+.footer .language {
+	padding: 0;
+	position: relative;
+	vertical-align: middle;
+	margin-left: 0;
+	left: 55%;
+	width: 30%;
+}
+
+.footer .language a {
+	margin: 0;
+	padding: 0;
+}
+
+.footer .language .thumbnail {
+	width: 100%;
+	height: auto;
+	display: inline-block;
+	padding: 0;
+	border: 0;
+	background-color: #F2E6FF;
+}
+
+.footer .language .greek .thumbnail {
+	float: right;
+	vertical-align: middle;
+}
+
+.footer .language .english .thumbnail {
+	float: right;
+	vertical-align: middle;
+}

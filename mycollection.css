@@ -1,0 +1,949 @@
+/* Container for everithing except footer*/
+#wrapper {
+	position: relative;
+	min-height: 967px;
+	height: auto !important;
+	margin-bottom: 5%;
+}
+
+/*EL's colour choice*/
+body {
+	background-color: #F2E6FF;
+	width: 1360px;
+	height: 768px;
+}
+
+.navbar {
+    position: relative;
+    padding: 0;
+    min-height: 78.4px;
+    width: 100%;
+    background-color: #ccbae0;
+    border-bottom-width: thin;
+    border-bottom: transparent;
+    box-shadow: 0px 6px 12px #969696;
+}
+
+/*Dropdown menu button*/
+#dropdownMenu1 {
+	position: absolute;
+	margin-top: 1.5%;
+	padding: none;
+	background-color: #f5effc;
+	border-color: #8c8c8c;
+	box-shadow: -3px 3px 6px rgba(0,0,0,.175);
+}
+
+#dropdownMenu1:hover {
+	background-color: white;
+	color: black;
+}
+
+#dropdownMenu1:active {
+	box-shadow: inset 3px 3px 1px #666;
+}
+
+/*Dropdown menu list [Home, My Collection, Account, Sign Out] */
+.dropdown-menu {
+	background-color: #f5effc;
+	position: absolute;
+	margin-top: 3.7%;
+	font-family: Raleway;
+}
+
+.dropdown-menu li:hover {
+	border-top: solid thin;
+	border-bottom: solid thin;
+	border-left: none;
+	border-right: none;
+	border-color: #b2b2b2;
+}
+
+.dropdown-menu a:active {
+	box-shadow: inset 3px 3px 1px #666;
+}
+
+/*Contains dropdown menu, logo, search welcome */
+.navbar-header {
+    float: left;
+    padding: 0;
+    width: 100%;
+}
+
+/* The logo */
+.navbar-brand {
+	display: block;
+	left: 49%;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	text-align: justify;
+}
+
+
+/*The logo's caption [MOOD RADIO]*/
+.navbar-brand .caption {
+	right: 12%;
+	bottom: 50%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	font-family: Racing Sans One;
+	font-style: Regular;
+	font-weight: 2%;
+	letter-spacing: 2%;
+	color: black;
+	text-shadow: 4px 4px 3px #888;
+}
+
+.navbar-brand .caption h2 {
+	font-size: 160%;
+}
+
+/* Logo's image */
+.navbar-brand img {
+	display: block;
+	height: auto;
+	position: relative;
+	width: 10%;
+}
+
+/* The search bar */
+.navbar-header .input-group {
+	margin: 1.6%;
+	right: 16%;
+	padding: 0;
+	position: relative;
+	width: 20%;
+	height: auto;
+	font-family: Raleway;
+	background-color: #f5effc;
+	
+}
+
+/* Search bar input part */
+.navbar-header .form-control {
+	border-color: #b2b2b2;
+	background-color: #f5effc;
+	box-shadow: inset 0px 0px 4px #b2b2b2;
+}
+
+/*.navbar-header .form-control:hover {
+	background-color: white;
+	box-shadow: 0px 0px 10px #a4f5f9;
+}*/
+
+.navbar-header .form-control:focus {
+	background-color: white;
+	box-shadow: 0px 0px 10px #5fddfc;
+}
+
+/* Search button*/
+.navbar-header .input-group .btn-default {
+	border-color: #b2b2b2;
+	background-color: #f5effc;
+	box-shadow: inset 0px 0px 6px #b2b2b2;
+}
+
+.navbar-header .input-group .btn-default:hover {
+	background-color: white;
+	color: black;
+	box-shadow: inset 0px 0px 3px #b2b2b2;
+}
+
+.navbar-header .input-group .btn-default:active {
+	box-shadow: inset 3px 3px 1px #666;
+}
+
+/* Welcome Team25 */
+.navbar-text {
+	right: -0.3%;
+	padding: none;
+	position: absolute;
+	font-family: Raleway;
+	font-style: Light;
+	letter-spacing: 2%;
+}
+
+.navbar-text h4 {
+	color: #686868;
+	font-size: 120%;
+}
+
+
+/* Chosen Filters Column list */
+.filters {
+	position: relative;
+	left: 0.8%;
+	width: 12%;
+	margin-top: 4%;
+	height: 887px;
+	font-family: Raleway;
+	border-right: solid thin;
+}
+
+.filters ul {
+	list-style-type: none;
+	position: relative;
+	right: 10%;
+	display: block;
+}
+
+.filters .moods {
+	height: 45%;
+}
+
+.filters .genres {
+	height: 50%;
+}
+
+/*FIlters header*/
+.filters h2 {
+	position: relative;
+	font-size: 225%;
+	margin-top: 2%;
+	left: 1%;
+	margin-bottom: -3%;
+}
+
+/*filters checkbox button*/
+.filters input {
+	position: relative;
+	vertical-align: bottom;
+}
+
+/* Moods, Genres headers*/
+.filters h3 {
+	position: relative;
+	right: 15%;
+	text-align: center;
+	font-size: 150%;
+	font-family: Raleway Light;
+	border-bottom: solid thin;
+	border-top: solid thin;
+}
+
+/*#tags*/
+.filters label {
+	font-size: 90%;
+	padding-left: 5%;
+}
+
+/*x (remove)*/
+.filters .btn-default {
+	position: relative;
+	background-color: #F2E6FF;
+	color: #333;
+	filter: opacity(30%);
+	border: solid thin;
+	border-color: #333;
+	display: none;
+	font-size: 50%;
+	vertical-align: text-bottom;
+}
+
+.filters .btn-default:hover {
+	color: #333;
+	border-color: #333;
+	filter: opacity(100%);
+}
+
+.filters .btn-default:active {
+	box-shadow: inset 2px 2px 3px #666;
+	background-color: #F2E6FF;
+}
+
+.filters .checkbox:hover .btn-default {
+	display: inline;
+}
+
+/*more tags link*/
+.filters .more-tags {
+	position: absolute;
+	top: 90%;
+	right: 0%;
+	text-align: right;
+}
+
+.filters .moods .more-tags {
+	top: 97%;
+}
+
+.filters .more-tags a {
+	/*color: #9131f7;*/
+	color: #333;
+}
+
+.filters .more-tags a:hover {
+	color: #9131f7;
+}
+
+/*all filters popup*/
+.allfilters {
+	position: relative;
+	right: 0.8%;
+	margin-top: 0%;
+	font-family: Raleway SemiBold;
+	font-style: italic;
+	font-size: 17px;
+	z-index: 90;
+}
+
+/*button activating popup*/
+.allfilters button {
+	background-color: #efefef;
+	box-shadow: 2px 2px 1px #ccc;
+}
+
+.allfilters button:hover {
+	background-color: #ccbae0;
+	box-shadow: inset 0px 0px 3px #b2b2b2
+}
+
+.allfilters button:active {
+	background-color: #ccbae0;
+	box-shadow: inset 3px 3px 1px #666;
+}
+
+/*the dark background behind popup*/
+#overlay{
+	position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 95;
+    cursor: pointer;
+}
+
+/*the popup area*/
+.jumbotron {
+	position: relative;
+	left: 5%;
+	top: 2%;
+	width: 90%;
+	height: 95%;
+	font-family: Raleway;
+	border-radius: 15px;
+}
+
+/*the x close button*/
+.jumbotron .close_button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 1%;
+}
+
+.jumbotron .close_button button {
+	box-shadow: 2px 2px 1px #ccc;
+}
+
+.jumbotron .close_button button:hover {
+	background-color: white;
+	color: black;
+	box-shadow: inset 0px 0px 3px #b2b2b2;
+}
+
+.jumbotron .close_button button:active {
+	box-shadow: inset 3px 3px 1px #666;
+}
+
+/*the search on the popup*/
+.jumbotron .input-group {
+	position: relative;
+	top: 0%;
+	width: 70%;
+	left: 14.8%;
+	margin-top: 0%;
+}
+
+.jumbotron .input-group button:hover {
+	background-color: white;
+	color: black;
+	box-shadow: inset 0px 0px 3px #b2b2b2;
+}
+
+.jumbotron .input-group button:active {
+	box-shadow: inset 3px 3px 1px #666;
+}
+
+/*thet tags underneath the search*/
+.jumbotron .chosen_tags {
+	list-style-type: none;
+	position: relative;
+	left: 12.1%;
+	width: 75%;
+	margin-top: 0.5%;
+}
+
+.jumbotron .chosen_tags > li {
+	display: inline-block;
+	padding: 0.5%;
+	padding-right: 0.3%;
+	padding-top: 0.7%;
+}
+
+.jumbotron .chosen_tags .label-default {
+	font-size: 90%;
+}
+
+/*the x remove button on the tags*/
+.jumbotron .chosen_tags button {
+	position: relative;
+	right: -3%;
+	font-size: 75%;
+	color: #eee;
+	background-color: #777;
+	border-color: #eee;
+	border: transparent;
+	filter: opacity(60%);
+}
+
+.jumbotron .chosen_tags button:hover {
+	border: solid thin; 
+	filter: opacity(100%);
+}
+
+/*Moods , Gneres headers above the popup's lists*/
+.jumbotron .filters_header {
+	position: relative;
+	display: inline-flex;
+	left: 1%;
+	width: 55%;
+	top: 5%;
+	justify-content: space-between;
+}
+
+.jumbotron .filters_header h3 {
+	margin: 0;
+}
+
+/*Moods header on popup*/
+.jumbotron .moods_header {
+	position: relative;
+	left: 2.1%;
+	width: 10%;
+	float: left;
+	text-decoration: underline;
+}
+
+/*Genres header on popup*/
+.jumbotron .genres_header {
+	position: relative;
+	width: 10%;
+	float: right;
+	text-decoration: underline;
+}
+
+/*All moods, genres filters on teh popup*/
+.jumbotron .all_filters {
+	position: absolute;
+	display: inline-block;
+	left: 1%;
+	top: 27%;
+	width: 98%;
+	height: 65%;
+	font-size: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+/*moodsfilters list*/
+.jumbotron .allmoods {
+	position: relative;
+	display: inline-block;
+	width: 45%;
+	column-count: 3;
+	column-gap: 20px;
+	overflow-x: hidden;
+	border-right: solid thin;
+}
+
+/*genres filters list*/
+.jumbotron .allgenres {
+	position: absolute;
+	display: inline-block;
+	top: 0%;
+	left: 49.5%;
+	width: 50%;
+	column-count: 3;
+	column-gap: 20px;
+	overflow-x: hidden;
+}
+
+/*apply button*/
+.jumbotron .apply {
+	position: absolute;
+	float: right;
+	right: 5.5%;
+	bottom: 2%;
+	z-index: 96;
+}
+
+.jumbotron .apply button {
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	padding-left: 20%;
+	padding-right: 20%;
+	box-shadow: 2px 2px 1px #bbb;
+}
+
+.jumbotron .apply button:hover {
+	background-color: #ccbae0;
+	color: black;
+	box-shadow: inset 0px 0px 3px #b2b2b2;
+}
+
+.jumbotron .apply button:active {
+	box-shadow: inset 3px 3px 1px #666;
+}
+
+.jumbotron .apply h3 {
+	font-family: Raleway Bold;
+	font-size: 120%;
+	margin-top: 15%;
+	margin-bottom: 15%;
+}
+
+/*Rcommendations, Favourites, My Playlist*/
+.collection {
+	position: absolute;
+	top: 10%;
+	left: 13.5%;
+	width: 95%;
+	z-index: 80;
+}
+
+.recommendations, .favourites, .myplaylists {
+	position: relative;
+	display: inline;
+	padding: 0;
+	height: auto;
+	text-align: left;
+	background-color: #F2E6FF;
+}
+
+/*Rcommendations, Favourites, My Playlist headers*/
+.recommendations h2, .favourites h2, .myplaylists h2 {
+	position: relative;
+	width: 17%;
+	left: 1.7%;
+	padding: 0;
+	margin-bottom: 0.1%;
+	margin-top: 4%;
+	font-family: Raleway Light;
+	font-size: 170%;
+	text-shadow: 1px 1px 1px #888;
+}
+
+.thumbnails {
+	display: inline;
+	list-style-type: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+/*play button on all thumbnails*/
+.thumbnails button {
+	margin: 0 auto;
+	padding: 0;
+	border: transparent;
+	background-color: transparent;
+	filter: opacity(60%);
+}
+
+.thumbnails button:hover {
+	background-color: transparent;
+	filter: opacity(100%);
+}
+
+.thumbnails button:focus {
+	background-color: transparent;
+	box-shadow: inset 2px 2px 3px #666;
+}
+
+/*the left sliding navigation button on all My Collection lists*/
+.btn-left {
+	position: relative;
+	float: left;
+	left: 1%;
+	width: 1%;
+	padding-top: 4.2%;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	z-index: 92;
+}
+
+/*the right sliding navigation button on all My Collection lists*/
+.btn-right {
+	position: relative;
+	float: right;
+	right: 11%;
+	width: 1%;
+	padding-top: 4.2%;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	z-index: 92;
+}
+
+/*size of recommendations, favourites and my playlists on screen large*/
+.recommendations .col-lg-2, .favourites .col-lg-2, .myplaylists .col-lg-2 {
+	width: 14.5%;
+	height: auto;
+}
+
+/*size of recommendations, favourites and my playlists on screen medium*/
+.recommendations .col-md-2, .favourites .col-md-2, .myplaylists .col-md-2 {
+	width: 14.5%;
+	/*height: auto;*/
+}
+
+.thumbnail {
+	padding: 0;
+	margin: 0;
+	width: 110%;
+	height: auto;
+}
+
+/*image on thumbnail*/
+.thumbnails img {
+	position: relative;
+	width: 110%;
+	height: 130px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-shadow: 3px 3px 3px #555;
+}
+
+.thumbnail:hover img {
+	filter: brightness(40%);
+}
+
+/*the My Playlists create thumbnail*/
+.create .thumbnail {
+	background-color: #131314;
+	width: 110%;
+	height: 130px;
+}
+
+/*tags on all thumbnails*/
+.tags {
+	position: absolute;
+	top: 0;
+	width: 90%;
+	display: none;
+	text-overflow: hidden;
+	word-wrap: break-word;
+	color: white;
+	overflow: hidden;
+	font-family: Raleway;
+}
+
+.tags p {
+	font-size: 85%;
+}
+
+.thumbnail:hover .tags{
+	display: block;
+}
+
+.thumbnail:hover .play{
+	display: block;
+}
+
+/*play button on all thumbnails*/
+.play {
+	display: none;
+	position: absolute;
+	top: 17%;
+	left: 40%;
+	width: auto;
+	height: auto;
+	margin: 0;
+	text-align: center;
+	font-size: 400%;
+	filter: opacity(60%);
+	z-index: 87;
+}
+
+.play:hover, .plus:hover {
+	filter: opacity(100%);
+	filter: brightness(110%);
+}
+
+.play a, .plus a {
+	background: none;
+	border: none;
+	padding: 0;
+	width: auto;
+	height: auto;
+	margin: 0;
+	color: #d3d3d3;
+}
+
+/*plus button on My Playlists first thumbnail*/
+.plus {
+	display: block;
+	position: absolute;
+	width: auto;
+	height: auto;
+	margin: 0 auto;
+	top: 18%;
+	left: 41%;
+	text-align: center;
+	font-size: 400%;
+	filter: opacity(60%);
+}
+
+/*playlist title and creator's name*/
+.thumbnails .caption {
+	padding: 0;
+	margin-top: -2%;
+	background-color: #F2E6FF;
+	font-family: Raleway;
+}
+
+/*link to creator's profile*/
+.thumbnails .caption a {
+	color: #333;
+	word-wrap: break-word;
+}
+
+.thumbnails .caption a:hover {
+	color: #9131f7;
+}
+
+.thumbnails .caption a:focus {
+	color: #9131f7;
+}
+
+.thumbnails .caption h4 {
+	font-size: 100%;
+	font-family: Raleway;
+}
+
+/*Create Playlist caption*/
+.create .caption {
+	text-align: center;
+	font-family: Raleway SemiBold;
+}
+
+.create .caption h4 {
+	font-size: 120%;
+}
+
+/* Contains social media, player widget, languages */
+.footer {
+	/*margin-left: -3.7%;*/
+	/*padding-bottom: -2%;*/
+	position: relative;
+	width: 100%;
+	height: 5%;
+	display: inline;
+	vertical-align: middle;
+}
+
+.footer .row {
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.footer ul {
+	position: relative;
+	list-style-type: none;
+	display: inline-flex;
+	vertical-align: middle;
+	padding: 0;
+	margin: 0;
+}
+
+/* facebook, twitter etc*/
+.footer .social {
+	position: relative;
+	padding-left: 0.8%;
+	height: auto;
+	width: 15%;
+}
+
+.footer .social > li {
+	position: relative;
+	display: inline;
+}
+
+.footer .social a {
+	padding: 0;
+	margin: 0;
+}
+
+.footer .social .thumbnail {
+	width: 100%;
+	height: auto;
+	float: left;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0;
+	border: 0;
+	background-color: #F2E6FF;
+}
+
+/* greek, english */
+.footer .language {
+	padding: 0;
+	position: relative;
+	vertical-align: middle;
+	margin-left: 0;
+	left: 39.7%;
+	width: 7%;
+}
+
+.footer .language .greek, .footer .language .english {
+	width: 47px;
+	height: 35.7px;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0;
+	border: 0;
+	margin: 0;
+	background-color: #F2E6FF;
+}
+
+.greek img, .english img {
+	width: 100%;
+	height: auto;
+	opacity: 0.6;
+}
+
+.footer .language .greek {
+	float: right;
+	margin-right: -0.1%;
+	vertical-align: middle;
+}
+
+.footer .language .english {
+	float: right;
+	vertical-align: middle;
+}
+
+.language img.opaque {
+	opacity: 1;
+}
+
+/* Player widget */
+.footer .widget {
+	vertical-align: middle;
+	position: relative;
+	left: 18%;
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+	padding: none;
+	bottom: 0;
+}
+
+/* Contains song title, music notes icons */
+.footer .widget .title .song-title {
+	width: 70%;
+	height: auto;
+	position: relative;
+	vertical-align: middle;
+	display: inline-block;
+	text-align: center;
+	word-wrap: normal;
+	white-space: pre-wrap;
+	white-space: normal;
+	word-break: break-all;
+	text-shadow: 1px 1px 1px #888;
+}
+
+/* Currently playing song title */
+.footer .widget .title .song-title h4 {
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+	color: #333;
+	font-family: Raleway Italic;
+	font-weight: bold;
+}
+
+/* Music note on the left and right */
+.music-icon-left, .music-icon-right {
+	display: inline;
+	font-size: 110%;
+	padding: 0;
+	position: relative;
+	vertical-align: top;
+}
+
+.footer .widget .player-icons {
+	width: 100%;
+	padding: 2%;
+	font-size: 150%;
+	display: inline-block;
+	vertical-align: middle;
+	color: #848484;
+	border: none;
+}
+
+/* Icon tat links to user's / artist's profile */
+.footer .widget .player-icons .glyphicon-user {
+	padding-right: 10%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.player-icons .glyphicon-user:hover {
+	color: #333;
+}
+
+/* Player widget's like [heart] icon */
+.footer .widget .player-icons .glyphicon-heart {
+	padding-left: 10%;
+	display: inline-block;
+	vertical-align: middle;
+	z-index: 90;
+}
+
+
+.footer .widget .player-icons .glyphicon-heart:hover {
+	color: #87273b;
+}
+
+.clicked {
+	color: #84011d;
+}
+
+/* Player widget's play icon */
+.footer .widget .player-icons .glyphicon-play-circle {
+	font-size: 220%;
+	padding: 0%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.footer .widget .player-icons .glyphicon-play-circle:hover {
+	color: #333;
+}
+
+/* Player widget's forward, backward one song icon */
+.glyphicon-step-backward, .glyphicon-step-forward {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.glyphicon-step-backward:hover {
+	color: #333;
+}
+
+.glyphicon-step-forward:hover {
+	color: #333;
+}

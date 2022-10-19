@@ -1,0 +1,670 @@
+/* Container for everithing except footer*/
+#wrapper {
+	position: relative;
+	min-height: 100%;
+	height: auto !important;
+	margin-bottom: 5%;
+}
+
+/*EL's colour choice*/
+body {
+	background-color: #F2E6FF;
+	width: 1360px;
+	height: 768px;
+}
+
+.navbar {
+    position: relative;
+    padding: 0;
+    min-height: 78.4px;
+    width: 100%;
+    background-color: #ccbae0;
+    border-bottom-width: thin;
+    border-bottom: transparent;
+    box-shadow: 0px 6px 12px #969696;
+}
+
+/*Dropdown menu button*/
+#dropdownMenu1 {
+	position: absolute;
+	margin-top: 1.5%;
+	padding: none;
+	background-color: #f5effc;
+	border-color: #8c8c8c;
+	box-shadow: -3px 3px 6px rgba(0,0,0,.175);
+}
+
+#dropdownMenu1:hover {
+	background-color: white;
+	color: black;
+}
+
+#dropdownMenu1:active {
+	box-shadow: inset 3px 3px 1px #666;
+}
+
+/*Dropdown menu list [Home, My Collection, Account, Sign Out] */
+.dropdown-menu {
+	background-color: #f5effc;
+	position: absolute;
+	margin-top: 3.7%;
+	font-family: Raleway;
+}
+
+.dropdown-menu li:hover {
+	border-top: solid thin;
+	border-bottom: solid thin;
+	border-left: none;
+	border-right: none;
+	border-color: #b2b2b2;
+}
+
+.dropdown-menu a:active {
+	box-shadow: inset 3px 3px 1px #666;
+}
+
+/*Contains dropdown menu, logo, search welcome */
+.navbar-header {
+    float: left;
+    padding: 0;
+    width: 100%;
+}
+
+/* The logo */
+.navbar-brand {
+	display: block;
+	left: 49%;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	text-align: justify;
+}
+
+
+/*The logo's caption [MOOD RADIO]*/
+.navbar-brand .caption {
+	right: 12%;
+	bottom: 50%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	font-family: Racing Sans One;
+	font-style: Regular;
+	font-weight: 2%;
+	letter-spacing: 2%;
+	color: black;
+	text-shadow: 4px 4px 3px #888;
+}
+
+.navbar-brand .caption h2 {
+	font-size: 160%;
+}
+
+/* Logo's image */
+.navbar-brand img {
+	display: block;
+	height: auto;
+	position: relative;
+	width: 10%;
+}
+
+/* The search bar */
+.navbar-header .input-group {
+	margin: 1.6%;
+	right: 16%;
+	padding: 0;
+	position: relative;
+	width: 20%;
+	height: auto;
+	font-family: Raleway;
+	background-color: #f5effc;
+	
+}
+
+/* Search bar input part */
+.navbar-header .form-control {
+	border-color: #b2b2b2;
+	background-color: #f5effc;
+	box-shadow: inset 0px 0px 4px #b2b2b2;
+}
+
+/*.navbar-header .form-control:hover {
+	background-color: white;
+	box-shadow: 0px 0px 10px #a4f5f9 #5fddfc;
+}*/
+
+.navbar-header .form-control:focus {
+	background-color: white;
+	box-shadow: 0px 0px 10px #5fddfc;
+}
+
+/* Search button*/
+.navbar-header .input-group .btn-default {
+	border-color: #b2b2b2;
+	background-color: #f5effc;
+	box-shadow: inset 0px 0px 6px #b2b2b2;
+}
+
+.navbar-header .input-group .btn-default:hover {
+	background-color: white;
+	color: black;
+	box-shadow: inset 0px 0px 3px #b2b2b2;
+}
+
+.navbar-header .input-group .btn-default:active {
+	box-shadow: inset 3px 3px 1px #666;
+}
+
+/* Welcome Team25 */
+.navbar-text {
+	right: -0.3%;
+	padding: none;
+	position: absolute;
+	font-family: Raleway;
+	font-style: Light;
+	letter-spacing: 2%;
+}
+
+.navbar-text h4 {
+	color: #686868;
+	font-size: 120%;
+}
+
+/*search bar, search results, playlist*/
+.main {
+	position: relative;
+	width: 98%;
+	height: auto;
+	left: 1.2%;
+	margin-top: 3%;
+}
+
+/*search bar*/
+.main .input-group {
+	position: absolute;
+	width: 70%;
+	left: 14.5%;
+	overflow: auto;
+}
+
+/*search bar input*/
+.main .form-control {
+	box-shadow: inset 0px 1px 2px #aaa;
+}
+
+.main .form-control:focus {
+	box-shadow: unset;
+	box-shadow:  0px 0px 2px #5fddfc;
+}
+
+/*search bar button*/
+.main .input-group .btn-default:hover {
+	background-color: white;
+	color: black;
+	box-shadow: inset 0px 0px 3px #b2b2b2;
+}
+
+.main .input-group .btn-default:active {
+	box-shadow: inset 3px 3px 1px #666;
+}
+
+/*thet tags underneath the search*/
+.main .chosen_tags {
+	list-style-type: none;
+	position: relative;
+	left: 11.2%;
+	width: 75%;
+	padding-top: 3%;
+}
+
+.main .chosen_tags > li {
+	display: inline-block;
+	padding: 0.5%;
+	padding-right: 0.3%;
+	padding-top: 0.7%;
+}
+
+.main .chosen_tags .label-default {
+	font-size: 90%;
+}
+
+/*the x remove button on the tags*/
+.main .chosen_tags button {
+	position: relative;
+	right: -3%;
+	font-size: 75%;
+	color: #eee;
+	background-color: #777;
+	border-color: #eee;
+	border: transparent;
+	filter: opacity(60%);
+}
+
+.main .chosen_tags button:hover {
+	border: solid thin; 
+	filter: opacity(100%);
+}
+
+/*search results*/
+.main .search-results {
+	position: absolute;
+	display: inline-block;
+	margin-top: 5%;
+	width: 85%;
+	height: auto;
+	left: 1.2%;
+}
+
+/*search results thumbnails list with description*/
+.main .search-results .thumbnails {
+	position: relative;
+	list-style-type: none;
+	display: inline-block;
+	right: 5%;
+	width: 90%;
+	height: auto;
+	column-count: 3;
+	column-gap: 100px;
+}
+
+.thumbnails .element {
+	display: inline-grid;
+}
+
+/*search results thumbnail*/
+.main .thumbnail {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	width: 80%;
+	height: auto;
+	background-color: transparent;
+}
+
+/*search results thumbnail image*/
+.main .thumbnail img {
+	position: relative;
+	float: left;
+	width: 80%;
+	height: 120px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-shadow: 3px 3px 3px #555;
+}
+
+/*playlist title and creator's name*/
+.thumbnails .caption {
+	position: relative;
+	left: 66%;
+	bottom: 100%;
+	height: 122px;
+	width: 50%;
+	padding: 0;
+	background-color: #F2E6FF;
+	font-family: Raleway;
+}
+
+/*mood, music tags related to respective playlist*/
+.thumbnails .caption .tags {
+	position: relative;
+	display: inline-block;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	height: 40%;
+	line-height: 90%;
+	width: auto;
+	overflow-y: hidden;
+	scroll-behavior: smooth;
+}
+
+.thumbnails .caption .tags:hover {
+	overflow-y: auto;
+	scroll-behavior: smooth;
+}
+.thumbnails .caption .tags p {
+	font-size: 85%;
+	overflow-y: auto;
+	box-sizing: content-box;
+}
+
+/*link to creator's profile*/
+.thumbnails .caption a {
+	color: #333;
+	word-wrap: break-word;
+}
+
+/*the preview link for viewing the playlist's songs*/
+.thumbnails .caption .preview {
+	position: relative;
+	font-size: 85%;
+	bottom: 0;
+}
+
+.thumbnails .caption a:hover {
+	color: #9131f7;
+}
+
+.thumbnails .caption a:focus {
+	color: #9131f7;
+}
+
+.thumbnails .caption h4 {
+	font-size: 90%;
+	margin-top: 0;
+	top: 0;
+}
+
+/*play button on all thumbnails*/
+.play {
+	display: block;
+	position: absolute;
+	top: 25%;
+	left: 26%;
+	width: auto;
+	height: auto;
+	margin: 0;
+	text-align: center;
+	font-size: 400%;
+	filter: opacity(60%);
+	z-index: 87;
+}
+
+.thumbnail:hover .play{
+	display: block;
+}
+
+.play:hover {
+	filter: opacity(100%);
+	filter: brightness(110%);
+}
+
+.play a {
+	background: none;
+	border: none;
+	padding: 0;
+	width: auto;
+	height: auto;
+	margin: 0;
+	color: #d3d3d3;
+}
+
+/*search results sho more results link*/
+.main .thumbnails .showmore {
+	position: absolute;
+	left: 46%;
+	margin-top: 0%;
+	bottom: 2.5%;
+}
+
+.main .thumbnails .showmore a {
+	color: #333;
+}
+
+.main .thumbnails .showmore a:hover {
+	color: #9131f7;
+}
+
+.main .thumbnails .showmore h4 {
+	font-family: Raleway;
+	font-size: 120%;
+}
+
+/*the second playlists songs*/
+.main .playlist {
+	position: relative;
+	bottom: 20%;
+	margin-top: 5%;
+	font-family: Raleway;
+	padding-left: 2%;
+	border: solid thin;
+	background-color: #eee/*f2f1ef*/;
+}
+
+/*playlist title*/
+.main .playlist .playlist-title {
+	position: relative;
+	right: 10.5%;
+	height: 5%;
+	width: 110.7%;
+	border-bottom: solid thin;
+}
+
+.main .playlist h3 {
+	position: relative;
+	text-align: center;
+	font-family: Raleway Bold;
+}
+
+/*playlist song*/
+.main .playlist h4 {
+	font-family: Raleway Light;
+	font-size: 100%;
+	line-height: 400%;
+}
+
+/*playlist's show more: disabled
+ * showing all tracks already
+ */
+.main .playlist .showmore {
+	text-align: center;
+	margin-bottom: 2%;
+}
+
+.main .playlist .showmore a {
+	color: #bbb;
+	pointer-events: none;
+}
+
+.main .playlist .showmore a:hover {
+	color: #9131f7;
+}
+
+
+/* Contains social media, player widget, languages */
+.footer {
+	/*margin-left: -3.7%;*/
+	/*padding-bottom: -2%;*/
+	position: relative;
+	top: 70%;
+	width: 100%;
+	/*height: 5%;*/
+	display: inline;
+	vertical-align: middle;
+}
+
+.footer .row {
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.footer ul {
+	position: relative;
+	list-style-type: none;
+	display: inline-flex;
+	vertical-align: middle;
+	padding: 0;
+	margin: 0;
+}
+
+/* facebook, twitter etc*/
+.footer .social {
+	position: relative;
+	padding-left: 0.8%;
+	height: auto;
+	width: 15%;
+}
+
+.footer .social > li {
+	position: relative;
+	display: inline;
+}
+
+.footer .social a {
+	padding: 0;
+	margin: 0;
+}
+
+.footer .social .thumbnail {
+	width: 100%;
+	height: auto;
+	float: left;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0;
+	border: 0;
+	background-color: #F2E6FF;
+}
+
+/* greek, english */
+.footer .language {
+	padding: 0;
+	position: relative;
+	vertical-align: middle;
+	margin-left: 0;
+	left: 39.7%;
+	width: 7%;
+}
+
+.footer .language .greek, .footer .language .english {
+	width: 47px;
+	height: 35.7px;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0;
+	border: 0;
+	margin: 0;
+	background-color: #F2E6FF;
+}
+
+.greek img, .english img {
+	width: 100%;
+	height: auto;
+	opacity: 0.6;
+}
+
+.footer .language .greek {
+	float: right;
+	margin-right: -0.1%;
+	vertical-align: middle;
+}
+
+.footer .language .english {
+	float: right;
+	vertical-align: middle;
+}
+
+.language img.opaque {
+	opacity: 1;
+}
+
+/* Player widget */
+.footer .widget {
+	vertical-align: middle;
+	position: relative;
+	left: 18%;
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+	padding: none;
+	bottom: 0;
+}
+
+/* Contains song title, music notes icons */
+.footer .widget .title .song-title {
+	width: 70%;
+	height: auto;
+	position: relative;
+	vertical-align: middle;
+	display: inline-block;
+	text-align: center;
+	word-wrap: normal;
+	white-space: pre-wrap;
+	white-space: normal;
+	word-break: break-all;
+	text-shadow: 1px 1px 1px #888;
+}
+
+/* Currently playing song title */
+.footer .widget .title .song-title h4 {
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+	color: #333;
+	font-family: Raleway Italic;
+	font-weight: bold;
+}
+
+/* Music note on the left and right */
+.music-icon-left, .music-icon-right {
+	display: inline;
+	font-size: 110%;
+	padding: 0;
+	position: relative;
+	vertical-align: top;
+}
+
+.footer .widget .player-icons {
+	width: 100%;
+	padding: 2%;
+	font-size: 150%;
+	display: inline-block;
+	vertical-align: middle;
+	color: #848484;
+	border: none;
+}
+
+/* Icon tat links to user's / artist's profile */
+.footer .widget .player-icons .glyphicon-user {
+	padding-right: 10%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.player-icons .glyphicon-user:hover {
+	color: #333;
+}
+
+/* Player widget's like [heart] icon */
+.footer .widget .player-icons .glyphicon-heart {
+	padding-left: 10%;
+	display: inline-block;
+	vertical-align: middle;
+	z-index: 90;
+}
+
+
+.footer .widget .player-icons .glyphicon-heart:hover {
+	color: #87273b;
+}
+
+.clicked {
+	color: #84011d;
+}
+
+/* Player widget's play icon */
+.footer .widget .player-icons .glyphicon-play-circle {
+	font-size: 220%;
+	padding: 0%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.footer .widget .player-icons .glyphicon-play-circle:hover {
+	color: #333;
+}
+
+/* Player widget's forward, backward one song icon */
+.glyphicon-step-backward, .glyphicon-step-forward {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.glyphicon-step-backward:hover {
+	color: #333;
+}
+
+.glyphicon-step-forward:hover {
+	color: #333;
+}

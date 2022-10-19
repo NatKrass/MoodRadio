@@ -1,0 +1,483 @@
+/* Container for everithing except footer*/
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	margin-bottom: 5%;
+}
+
+/*EL's colour choice*/
+body {
+	background-color: #F2E6FF;
+	width:1366px;
+	height:768px;
+}
+
+.navbar {
+    position: relative;
+    padding: 0;
+    min-height: 78.4px;
+    width: 100%;
+    background-color: #ccbae0;
+    border-bottom-width: thin;
+    border-bottom: transparent;
+    box-shadow: 0px 6px 12px #969696;
+
+}
+
+/*Dropdown menu button*/
+#dropdownMenu1 {
+	position: absolute;
+	margin-top: 1%;
+	padding: none;
+	background-color: #f5effc;
+	border-color: #8c8c8c;
+	box-shadow: -3px 3px 6px rgba(0,0,0,.175);
+}
+
+#dropdownMenu1:hover {
+	background-color: white;
+	color: black;
+}
+
+#dropdownMenu1:active {
+	box-shadow: inset 3px 3px 1px #666;
+}
+
+/*Dropdown menu list [Home, My Collection, Account, Sign Out] */
+.dropdown-menu {
+	background-color: #f5effc;
+	position: absolute;
+	margin-top: 3%;
+	font-family: Raleway;
+}
+
+.dropdown-menu li:hover {
+	border-top: solid thin;
+	border-bottom: solid thin;
+	border-left: none;
+	border-right: none;
+	border-color: #b2b2b2;
+}
+
+.dropdown-menu a:active {
+	box-shadow: inset 3px 3px 1px #666;
+}
+
+/*Contains dropdown menu, logo, search welcome */
+.navbar-header {
+    float: left;
+    padding: 0;
+    width: 100%;
+}
+
+/* The logo */
+.navbar-brand {
+	display: block;
+	left: 50%;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	text-align: justify;
+}
+
+
+/*The logo's caption [MOOD RADIO]*/
+.navbar-brand .caption {
+	left: -40%;
+	top: -53%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	font-family: Racing Sans One;
+	font-style: Regular;
+	font-weight: 2%;
+	letter-spacing: 2%;
+	color: black;
+	text-shadow: 4px 4px 3px #888;
+}
+
+/* Logo's image */
+.navbar-brand img {
+	display: block;
+	height: auto;
+	position: relative;
+	width: 52px;
+}
+
+/* The search bar */
+.navbar-header .input-group {
+	margin-top: 1%;
+	right: 17%;
+	padding: 0;
+	position: relative;
+	width: 20%;
+	font-family: Raleway;
+	background-color: #f5effc;
+	
+}
+
+/* Search bar input part */
+.navbar-header .form-control {
+	border-color: #b2b2b2;
+	background-color: #f5effc;
+	box-shadow: inset 0px 0px 4px #b2b2b2;
+}
+
+/*.navbar-header .form-control:hover {
+	background-color: white;
+	box-shadow: 0px 0px 10px #a4f5f9;
+}*/
+
+.navbar-header .form-control:focus {
+	background-color: white;
+	box-shadow: 0px 0px 10px #5fddfc;
+}
+
+/* Search button*/
+.navbar-header .input-group .btn-default {
+	border-color: #b2b2b2;
+	background-color: #f5effc;
+	box-shadow: inset 0px 0px 6px #b2b2b2;
+}
+
+.navbar-header .input-group .btn-default:hover {
+	background-color: white;
+	color: black;
+	box-shadow: inset 0px 0px 3px #b2b2b2;
+}
+
+.navbar-header .input-group .btn-default:active {
+	box-shadow: inset 3px 3px 1px #666;
+}
+
+/* Welcome Team25 */
+.navbar-text {
+	right: 0.01%;
+	padding: none;
+	position: absolute;
+	font-family: Raleway;
+	font-style: Light;
+	font-size: 23px;
+	letter-spacing: 2%;
+}
+
+.navbar-text h4 {
+	color: #686868;
+}
+/*------------------------------------------------------------------------------------------------*/
+#box{
+	width:260px;
+	height:150px;
+	background:#F2F2F2;
+	border-width:1px;
+	border-style:solid;
+	border-color:#848484;
+	float: right;
+	margin-top:4%;
+	margin-right: 12%;
+}
+
+#box a {
+	color: #9131f7;
+}
+
+.account_details{
+	margin-left: 2%;
+	
+}
+
+
+.Details{
+	margin-right: 48%;
+	margin-top:1.5%;
+}
+
+.Pre{
+	margin-left:2%;
+	margin-top:1.5%;
+	position:absolute;
+}
+
+.test{
+	margin-left:2%;
+	margin-top:0%;
+}
+
+.save1{
+	text-align: right;
+	margin-right: 2%;	
+}
+
+.preferences{
+	margin-right: 20%;
+	margin-top:2%;
+	position:absolute;
+}
+
+.save2{
+	text-align: right;
+	margin-right: 2%;
+}
+
+.jpg{
+	margin-left: -1%;
+	border-width:20px;
+	border-color:black;
+	margin-top:-1%;
+}
+/*----------------------------------------------------*/
+
+
+
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.tags-input .tag {
+    font-size: 90%;
+    padding: 0em 0.50em;
+    margin: 0.25em 0.1em;
+    display: inline-block;
+    background-color: #ddd;
+    transition: all 0.1s linear;
+    cursor: pointer;
+	transform: scale(1);
+	margin-right: 73.3%;
+	margin-top:1%;
+
+}
+
+.tags-input .tag:hover {
+    background-color: #3af;
+    color: white;
+}
+
+.tags-input .tag .close::after {
+    content: '×';
+    font-weight: bold;
+    display: inline-block;
+    transform: scale(1.4);
+    margin-left: 0.75em;
+}
+
+
+.tags-input.main-input{
+    border: 0;
+    outline: 0;
+    padding: 0.5em 0.1em;
+	
+}
+
+.main-input{
+	display:none;
+}
+
+/* Contains social media, player widget, languages */
+.footer {
+	/*margin-left: -3.7%;*/
+	/*padding-bottom: -2%;*/
+	position: relative;
+	width: 100%;
+	height: 5%;
+	display: inline;
+	vertical-align: middle;
+}
+
+.footer .row {
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.footer ul {
+	position: relative;
+	list-style-type: none;
+	display: inline-flex;
+	vertical-align: middle;
+	padding: 0;
+	margin: 0;
+}
+
+/* facebook, twitter etc*/
+.footer .social {
+	position: relative;
+	padding-left: 0.8%;
+	height: auto;
+	width: 15%;
+}
+
+.footer .social > li {
+	position: relative;
+	display: inline;
+}
+
+.footer .social a {
+	padding: 0;
+	margin: 0;
+}
+
+.footer .social .thumbnail {
+	width: 100%;
+	height: auto;
+	float: left;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0;
+	border: 0;
+	background-color: #F2E6FF;
+}
+
+/* greek, english */
+.footer .language {
+	padding: 0;
+	position: relative;
+	vertical-align: middle;
+	margin-left: 0;
+	left: 39.7%;
+	width: 7%;
+}
+
+.footer .language .greek, .footer .language .english {
+	width: 47px;
+	height: 35.7px;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0;
+	border: 0;
+	margin: 0;
+	background-color: #F2E6FF;
+}
+
+.greek img, .english img {
+	width: 100%;
+	height: auto;
+	opacity: 0.6;
+}
+
+.footer .language .greek {
+	float: right;
+	margin-right: -0.1%;
+	vertical-align: middle;
+}
+
+.footer .language .english {
+	float: right;
+	vertical-align: middle;
+}
+
+.language img.opaque {
+	opacity: 1;
+}
+
+/* Player widget */
+.footer .widget {
+	vertical-align: middle;
+	position: relative;
+	left: 18%;
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+	padding: none;
+	bottom: 0;
+}
+
+/* Contains song title, music notes icons */
+.footer .widget .title .song-title {
+	width: 70%;
+	height: auto;
+	position: relative;
+	vertical-align: middle;
+	display: inline-block;
+	text-align: center;
+	word-wrap: normal;
+	white-space: pre-wrap;
+	white-space: normal;
+	word-break: break-all;
+	text-shadow: 1px 1px 1px #888;
+}
+
+/* Currently playing song title */
+.footer .widget .title .song-title h4 {
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+	color: #333;
+	font-family: Raleway Italic;
+	font-weight: bold;
+}
+
+/* Music note on the left and right */
+.music-icon-left, .music-icon-right {
+	display: inline;
+	font-size: 110%;
+	padding: 0;
+	position: relative;
+	vertical-align: top;
+}
+
+.footer .widget .player-icons {
+	width: 100%;
+	padding: 2%;
+	font-size: 150%;
+	display: inline-block;
+	vertical-align: middle;
+	color: #848484;
+	border: none;
+}
+
+/* Icon tat links to user's / artist's profile */
+.footer .widget .player-icons .glyphicon-user {
+	padding-right: 10%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.player-icons .glyphicon-user:hover {
+	color: #333;
+}
+
+/* Player widget's like [heart] icon */
+.footer .widget .player-icons .glyphicon-heart {
+	padding-left: 10%;
+	display: inline-block;
+	vertical-align: middle;
+	z-index: 90;
+}
+
+
+.footer .widget .player-icons .glyphicon-heart:hover {
+	color: #87273b;
+}
+
+.clicked {
+	color: #84011d;
+}
+
+/* Player widget's play icon */
+.footer .widget .player-icons .glyphicon-play-circle {
+	font-size: 220%;
+	padding: 0%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.footer .widget .player-icons .glyphicon-play-circle:hover {
+	color: #333;
+}
+
+/* Player widget's forward, backward one song icon */
+.glyphicon-step-backward, .glyphicon-step-forward {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.glyphicon-step-backward:hover {
+	color: #333;
+}
+
+.glyphicon-step-forward:hover {
+	color: #333;
+}

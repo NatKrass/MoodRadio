@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		 
+		<!-- If IE use the latest rendering engine -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		 
+		<!-- Set the page to the width of the device and set the zoon level -->
+		<meta name="viewport" content="width = device-width, initial-scale = 1">
+		<title>Mood Radio / Player</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="productpage.css">
+	</head>
+
+	<body>
+
+		<div id="wrapper">
+			<!--navbar-->
+			<nav class = "navbar navbar-default">
+				<div class = "container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<div class="dropdown">
+						<!--dropdown menu-->	
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="Mood_Radio.html">Home</a></li>
+								<li><a href="Mood_Radio_mycollection.html">My Collection</a></li>
+								<li><a href="Account.html">Account</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="end.html">Sign Out</a></li>
+							</ul>
+						</div>
+
+						<!--Mood Radio logo-->
+						<a class="navbar-brand" href="Mood_Radio.html">
+							<img alt="Mood Radio" src="./images/mood_radio_icon.png">
+							
+							<div class="caption">
+					      		<h2>MOOD RADIO</h2>
+					      	</div>
+						</a>
+
+						<!--search-->
+	    				<div class="input-group pull-right">
+	    					<input type="text" class="form-control" placeholder="Search for Playlist, Song, Artist, User">
+	    					<span class="input-group-btn">
+	       						<a href="Mood_Radio_searchresults.html">
+		       						<button class="btn btn-default" type="button">
+		       							<span class="glyphicon glyphicon-search"></span>
+		       						</button>
+		       					</a>
+	     					</span>
+	   					</div> <!-- /input-group -->
+
+	   					<!--Sign in / Account link-->
+	   					<a class="navbar-text pull-right" href="Account.html">
+	   						<h4>Welcome Team25</h4>
+	   					</a>
+					</div> <!--navbar-header-->
+				</div> <!--container-fluid-->
+			</nav> <!--navbar-->
+
+			<!-- player-->
+			<div class="player">
+
+				<!-- video-container -->
+				<div id="video-container">
+					<!-- video -->
+					<video class="video">
+						<source src="./images/I wanna kill you like they do in the movies Marilyn Manson .webm" type="video/webm">
+						Your browser does not support this video format.
+						Original source: 
+						<a href="https://www.youtube.com/watch?v=ZTmpHnQpfsU"></a>
+					</video>
+
+					<p><em>#bitter #dark  #demonic  #grim #macabre 
+						#negative #paranoid #provocative #threatening
+						#unsettling #alternative #glam
+						#hard rock #industrial
+						#metal #rock
+						#Marilyn Manson</em>
+					</p>
+
+					<!-- video controls -->
+					<div class="controls">
+						<!--seek-bar-->
+						<div class="seek-bar">
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemax="100"></div>
+							</div>
+
+							<!--timer-->
+							<div class="timer pull-right">
+								5:11
+							</div>		
+						</div>
+							
+						<!--artist icon-->
+						<div class="artist-icon pull-left">
+							<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+								<a href="#" class="thumbnail">
+									<img src="./images/Sid-and-Nancy-Cinematography3.png" alt="I Want To Kill You Like They Do In The Movies">
+
+									<!--song title-->
+									<div class="caption">
+										<h5>I Want To Kill You Like They Do In The Movies</h5>
+									</div>	
+								</a>	
+							</div>	
+						</div>
+						
+						<!--love /like-->
+						<div class="heart">
+
+							<button type="button" id="like" class="btn btn-default btn-sm">
+								<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+							</button>
+						</div>	
+
+						<!--shuffle-->
+						<div class="shuffle">
+
+							<button type="button" class="btn btn-default btn-sm">
+								<span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+							</button>
+						</div>
+
+						<!--repeat-->
+						<div class="repeat">
+
+							<button type="button" class="btn btn-default btn-sm">
+								<span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+							</button>
+						</div>
+
+						<!--previous-->
+						<div class="previous">
+
+							<button type="button" class="btn btn-default btn-sm">
+								<span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+							</button>
+						</div>
+							
+						<!--play-->
+						<div class="play-pause">
+							<button type="button" id="playpause" class="btn btn-default btn-sm">
+								<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+							</button>
+						</div>
+							
+						<!--next-->
+						<div class="next">
+
+							<button type="button" class="btn btn-default btn-sm">
+								<span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+							</button>
+						</div>
+							
+						<!--tags-->
+						<div class="tags">
+
+							<button type="button" class="btn btn-default btn-sm">
+								<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+							</button>
+						</div>
+							
+						<!--full screen-->
+						<div class="fullscreen">
+
+							<button type="button" id="full-screen" class="btn btn-default btn-sm">
+								<span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+							</button>	
+						</div>
+							
+						<!--volume-->
+						<div class="volume">
+
+							<button type="button" class="btn btn-default btn-sm">
+								<span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span>
+							</button>
+
+							<input type="range" id="volume-slider" value="70">
+						</div>	
+					</div>	<!--video-ontrols-->	
+				</div> <!--video-container -->	
+
+				<!--song & playlist title, user / artist name-->
+				<div class="description">
+					
+					<div class="title">
+						<h4>I Want To Kill You Like They Do In The Movies - What We Do Alone In The Dark</h4>
+					</div>
+
+					<div class="username">	
+						<h4>created by<br><a href="#">TheLongestUsernameEverUsed</a></h4>
+					</div>	
+				</div> <!--song & playlist title, user / artist name-->
+
+				<!--songs playlist-->
+				<div class="playlist">
+					<h3>What We Do Alone In The Dark</h3>
+
+					<!--playlist thumbnails -->
+					<ul class="thumbnails">
+						<!--big bad wolf -->
+						<li>
+							<div class="col-xs-1 col-sm-1 col-md-2 col-lg 2">
+								<div class="thumbnail">
+									<img src="./images/inthismomentblackwidow.jpg" alt="Big Bad Wolf">
+
+									<div class="tags">
+
+										<p><em>#coffee  #chill  #content  #hangout #piano 
+					 							#jazz #blues #acoustic #pop
+					 							#wakeup #afternoon #winter
+					 							#Amy Whinehouse #Adele
+					 							#Cranberries #RadioHead
+					 							#Cristina Aguilera</em>
+					 					</p>
+					 				</div>
+					 				
+					 				<div class="play">
+					 					<a href="#"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>
+					 				</div>
+					 			</div>	
+
+				 				<div class="caption">
+			      					<h4>Big Bad Wolf <br>by <a href="#">In This Moment</a><br><br><br><br>5K Likes</h4>
+			      				</div>
+							</div>	
+						</li> <!--big bad wolf-->
+						<!--Blood -->
+						<li>
+							<div class="col-xs-1 col-sm-1 col-md-2 col-lg 2">
+								<div class="thumbnail">
+									<img src="./images/In+This+Moment+-+Blood+(2012).jpeg" alt="Blood">
+
+									<div class="tags">
+
+										<p><em>#coffee  #chill  #content  #hangout #piano 
+					 							#jazz #blues #acoustic #pop
+					 							#wakeup #afternoon #winter
+					 							#Amy Whinehouse #Adele
+					 							#Cranberries #RadioHead
+					 							#Cristina Aguilera</em>
+					 					</p>
+					 				</div>
+					 				
+					 				<div class="play">
+					 					<a href="#"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>
+					 				</div>
+					 			</div>	
+
+				 				<div class="caption">
+			      					<h4>Blood <br>by <a href="#">In This Moment</a><br><br><br><br>7K Likes</h4>
+			      				</div>
+							</div>	
+						</li> <!--Blood-->
+						<!--The Nameless -->
+						<li>
+							<div class="col-xs-1 col-sm-1 col-md-2 col-lg 2">
+								<div class="thumbnail">
+									<img src="./images/5eadad4288af11d0de5111f3f66646c2.jpg" alt="The Nameless">
+
+									<div class="tags">
+
+										<p><em>#coffee  #chill  #content  #hangout #piano 
+					 							#jazz #blues #acoustic #pop
+					 							#wakeup #afternoon #winter
+					 							#Amy Whinehouse #Adele
+					 							#Cranberries #RadioHead
+					 							#Cristina Aguilera</em>
+					 					</p>
+					 				</div>
+					 				
+					 				<div class="play">
+					 					<a href="#"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>
+					 				</div>
+					 			</div>	
+					 				
+				 				<div class="caption">
+			      					<h4>The Nameless <br>by <a href="#">Slipknot</a><br><br><br><br>9K Likes</h4>
+			      				</div>
+							</div>	
+						</li> <!--The Nameless-->
+						<!--Freak On A Leash -->
+						<li>
+							<div class="col-xs-1 col-sm-1 col-md-2 col-lg 2">
+								<div class="thumbnail">
+									<img src="./images/Korn_Follow.jpg" alt="Freak On A Leash">
+
+									<div class="tags">
+
+										<p><em>#coffee  #chill  #content  #hangout #piano 
+					 							#jazz #blues #acoustic #pop
+					 							#wakeup #afternoon #winter
+					 							#Amy Whinehouse #Adele
+					 							#Cranberries #RadioHead
+					 							#Cristina Aguilera</em>
+					 					</p>
+					 				</div>
+					 				
+					 				<div class="play">
+					 					<a href="#"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>
+					 				</div>
+					 			</div>	
+
+				 				<div class="caption">
+			      					<h4>Freak On A Leash <br>by <a href="#">Korn</a><br><br><br><br>15K Likes</h4>
+			      				</div>
+							</div>	
+						</li> <!--Freak On A Leash-->
+						<!--Cloud Connected -->
+						<li>
+							<div class="col-xs-1 col-sm-1 col-md-2 col-lg 2">
+								<div class="thumbnail">
+									<img src="./images/740full-reroute-to-remain-cover.jpg" alt="Cloud Connected">
+
+									<div class="tags">
+
+										<p><em>#coffee  #chill  #content  #hangout #piano 
+					 							#jazz #blues #acoustic #pop
+					 							#wakeup #afternoon #winter
+					 							#Amy Whinehouse #Adele
+					 							#Cranberries #RadioHead
+					 							#Cristina Aguilera</em>
+					 					</p>
+					 				</div>
+					 				
+					 				<div class="play">
+					 					<a href="#"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>
+					 				</div>
+					 			</div>	
+
+				 				<div class="caption">
+			      					<h4>Cloud Connected <br>by <a href="#">In Flames</a><br><br><br><br>19K Likes</h4>
+			      				</div>
+							</div>	
+						</li> <!--Cloud Connected-->
+
+					</ul> <!--playlist thumbnails -->	
+				</div> <!--songs playlist -->
+			</div> <!--player-->
+				
+			<!--suggestions-->
+			<div class="suggestions">
+				<h3>Suggestions</h3>
+
+				<!--thumbnails-->
+				<ul class="thumbnails">
+					<!--Blood -->
+						<li>
+							<div class="col-xs-1 col-sm-1 col-md-2 col-lg 2">
+								<div class="thumbnail">
+									<img src="./images/Goin-blood-stencil-art-spray-abode-of-chaos-2011.jpg" alt="Blood">
+
+									<div class="tags">
+
+										<p><em>#coffee  #chill  #content  #hangout #piano 
+					 							#jazz #blues #acoustic #pop
+					 							#wakeup #afternoon #winter
+					 							#Amy Whinehouse #Adele
+					 							#Cranberries #RadioHead
+					 							#Cristina Aguilera</em>
+					 					</p>
+					 				</div>
+					 				
+					 				<div class="play">
+					 					<a href="#"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>
+					 				</div>
+					 			</div>	
+
+				 				<div class="caption">
+			      					<h4>Blood by <a href="#">Styx32</a></h4>
+			      				</div>
+							</div>	
+						</li> <!--Blood-->
+						<!--War -->
+						<li>
+							<div class="col-xs-1 col-sm-1 col-md-2 col-lg 2">
+								<div class="thumbnail">
+									<img src="./images/war-art-paintings.jpg" alt="War">
+
+									<div class="tags">
+
+										<p><em>#coffee  #chill  #content  #hangout #piano 
+					 							#jazz #blues #acoustic #pop
+					 							#wakeup #afternoon #winter
+					 							#Amy Whinehouse #Adele
+					 							#Cranberries #RadioHead
+					 							#Cristina Aguilera</em>
+					 					</p>
+					 				</div>
+					 				
+					 				<div class="play">
+					 					<a href="#"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>
+					 				</div>
+					 			</div>	
+
+				 				<div class="caption">
+			      					<h4>War by <a href="#">Amaranthe</a></h4>
+			      				</div>
+							</div>	
+						</li> <!--War-->
+						<!--Through Fire -->
+						<li>
+							<div class="col-xs-1 col-sm-1 col-md-2 col-lg 2">
+								<div class="thumbnail">
+									<img src="./images/nature_fire_for_use_by_m3los93-d5mehe9.jpg" alt="Through Fire">
+
+									<div class="tags">
+
+										<p><em>#coffee  #chill  #content  #hangout #piano 
+					 							#jazz #blues #acoustic #pop
+					 							#wakeup #afternoon #winter
+					 							#Amy Whinehouse #Adele
+					 							#Cranberries #RadioHead
+					 							#Cristina Aguilera</em>
+					 					</p>
+					 				</div>
+					 				
+					 				<div class="play">
+					 					<a href="#"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>
+					 				</div>
+					 			</div>	
+
+				 				<div class="caption">
+			      					<h4>Through Fire by <a href="#">Stephen8753</a></h4>
+			      				</div>
+							</div>	
+						</li> <!--Through Fire-->
+						<!--Hell On Earth -->
+						<li>
+							<div class="col-xs-1 col-sm-1 col-md-2 col-lg 2">
+								<div class="thumbnail">
+									<img src="./images/4712652584852526a3ccc47d9a246ca7.jpg" alt="Hell On Earth">
+
+									<div class="tags">
+
+										<p><em>#coffee  #chill  #content  #hangout #piano 
+					 							#jazz #blues #acoustic #pop
+					 							#wakeup #afternoon #winter
+					 							#Amy Whinehouse #Adele
+					 							#Cranberries #RadioHead
+					 							#Cristina Aguilera</em>
+					 					</p>
+					 				</div>
+					 				
+					 				<div class="play">
+					 					<a href="#"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>
+					 				</div>
+					 			</div>	
+
+				 				<div class="caption">
+			      					<h4>Hell On Earth by <a href="#">zombie300</a></h4>
+			      				</div>
+							</div>	
+						</li> <!--Hell On Earth-->
+						<!--Cursed City -->
+						<li>
+							<div class="col-xs-1 col-sm-1 col-md-2 col-lg 2">
+								<div class="thumbnail">
+									<img src="./images/61f8ac897aa543d971cf2d110bcec431.jpg" alt="Cursed City">
+
+									<div class="tags">
+
+										<p><em>#coffee  #chill  #content  #hangout #piano 
+					 							#jazz #blues #acoustic #pop
+					 							#wakeup #afternoon #winter
+					 							#Amy Whinehouse #Adele
+					 							#Cranberries #RadioHead
+					 							#Cristina Aguilera</em>
+					 					</p>
+					 				</div>
+					 				
+					 				<div class="play">
+					 					<a href="#"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>
+					 				</div>
+					 			</div>	
+
+				 				<div class="caption">
+			      					<h4>Cursed City by <a href="#">Dan Moore</a></h4>
+			      				</div>
+							</div>	
+						</li> <!--Cursed City-->
+						<!--Rock Bottom -->
+						<li>
+							<div class="col-xs-1 col-sm-1 col-md-2 col-lg 2">
+								<div class="thumbnail">
+									<img src="./images/qsc6PjB.jpg" alt="Rock Bottom">
+
+									<div class="tags">
+
+										<p><em>#coffee  #chill  #content  #hangout #piano 
+					 							#jazz #blues #acoustic #pop
+					 							#wakeup #afternoon #winter
+					 							#Amy Whinehouse #Adele
+					 							#Cranberries #RadioHead
+					 							#Cristina Aguilera</em>
+					 					</p>
+					 				</div>
+					 				
+					 				<div class="play">
+					 					<a href="#"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>
+					 				</div>
+					 			</div>	
+
+				 				<div class="caption">
+			      					<h4>Rock Bottom by <a href="#">Azaziel55</a></h4>
+			      				</div>
+							</div>	
+						</li> <!--Rock Bottom-->
+						<!--The Day The World Turned To Ashes -->
+						<!-- <li>
+							<div class="col-xs-1 col-sm-1 col-md-2 col-lg 2">
+								<div class="thumbnail">
+									<img src="./images/213830-apocalyptic-and-post-apocalyptic-fiction-the-road-screenshot.png" alt="The Day The World Turned To Ashes">
+
+									<div class="tags">
+
+										<p><em>#coffee  #chill  #content  #hangout #piano 
+					 							#jazz #blues #acoustic #pop
+					 							#wakeup #afternoon #winter
+					 							#Amy Whinehouse #Adele
+					 							#Cranberries #RadioHead
+					 							#Cristina Aguilera</em>
+					 					</p>
+					 				</div>
+					 				
+					 				<div class="play">
+					 					<a href="#"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>
+					 				</div>
+					 			</div>	
+
+				 				<div class="caption">
+			      					<h4>The Day The World Turned To Ashes by <a href="#">TheLongestUsernameEverUsed</a></h4>
+			      				</div>
+							</div>	
+						</li> --> <!--The Day The World Turned To Ashes-->
+				</ul> <!--thumbnails-->	
+			</div> <!--suggestions-->	
+		</div> <!--wrapper -->
+
+		<!--footer-->
+		<footer class="footer">
+			<div class="row">
+				<ul class="social"> <!--social-->
+					<li>
+						<div class="facebook"> <!--facebook-->
+								<a href="#" class="thumbnail">
+									<img src="images/697057-facebook-512.png" alt="Facebook">
+								</a>
+						</div> <!--facebook-->
+					</li>
+					<li>
+						<div class="twitter"> <!--twitter-->
+								<a href="#" class="thumbnail">
+									<img src="images/697029-twitter-512.png" alt="Twitter">
+								</a>
+						</div> <!--twitter-->
+					</li>
+					<li>
+						<div class="youtube"> <!--youtube-->
+								<a href="#" class="thumbnail">
+									<img src="images/95565_yt_512x512.png" alt="Youtube">
+								</a>
+						</div> <!--youtube-->
+					</li>
+					<li>
+						<div class="instagram"> <!--instagram-->
+								<a href="#" class="thumbnail">
+									<img src="images/697067-instagram-512.png" alt="Instagram">
+								</a>
+						</div> <!--instagram-->
+					</li>
+				</ul> <!--social-->
+
+				<!--music widget -->
+				<!-- <div class="widget">
+					<div class="title">
+						<div class="music-icon-left">
+							<span class="glyphicon glyphicon-music"></span>
+						</div>
+						<div class="song-title">
+							<a href="#"><h4><strong>I Want To Kill You Like They Do In The Movies</strong></h4></a>
+						</div>
+						<div class="music-icon-right">
+							<span class="glyphicon glyphicon-music"></span>
+						</div>
+					</div>
+
+					<div class="player-icons">
+						<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+					</div>	
+				</div> --> <!-- music widget-->
+
+				<ul class="language"> <!-- language -->
+					<li>
+						<div class="english"> <!-- english -->
+							<img src="images/English_Flag_Language.png" alt="English">
+						</div> <!-- english -->
+					</li>
+					<li>
+						<div class="greek"> <!-- greek -->
+							<img src="images/greece_640.png" alt="Greek" class="opaque">
+						</div> <!-- greek -->
+					</li>
+				</ul> <!-- language -->
+			</div>
+		</footer>
+	
+
+		<!-- <script type="text/javascript" src="videoscript.js"></script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="./jquery.fullscreen-master/release/jquery.fullscreen.min.js"></script>
+		<script type="text/javascript">
+			$('#playpause').click(function () {
+
+   				$("span", this).toggleClass("glyphicon glyphicon-play-circle glyphicon glyphicon-pause");
+  				if ($("video.video").get(0).paused) {
+       				$("video.video").get(0).play();
+  				} else {
+       				$("video.video").get(0).pause();
+  				}
+			});
+
+			/*var fullScreen = document.getElementById("full-screen");
+
+			fullScreen.addEventListener("click", function () {
+				if(video.requestFullscreen) {
+					video.requestFullscreen();
+				}else if(video.mozRequestFullScreen) {
+					video.mozRequestFullScreen(); //Firefox
+				}else if (video.webkitRequestFullscreen) {
+					video.webkitRequestFullscreen(); //Chrome and Safari
+				}
+			});*/
+
+			$("#full-screen").click(function () {
+				$("span", this).toggleClass("glyphicon glyphicon-resize-full glyphicon glyphicon-resize-small");
+				if($(".video").fullScreen){
+					$.fullscreen.exit();
+				}else{
+					$(".video").fullscreen();
+				}
+			});
+
+			$(".heart").click(function () {
+				$("button", this).toggleClass("clicked");
+				$("span", this).toggleClass("clicked");
+			});
+
+			$(".language img").click(function() {
+				$(this).parent().find("img").toggleClass("opaque");
+			});
+
+			$("#video-container p").hide();
+
+			$(".tags").click(function() {
+				$("#video-container p").toggle();
+			});
+			
+		</script>
+	</body>
+</html>			

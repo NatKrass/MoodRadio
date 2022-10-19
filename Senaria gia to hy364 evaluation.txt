@@ -1,0 +1,79 @@
+Senaria gia to hy364 evaluation
+
+Senario 1 (home page -> product page):
+	1. change  language (greek to english)
+
+	2.choose  a mood (link to product page)
+
+	3.play / pause the song
+
+	4. full screen / exit full screen
+
+	5.toggle song tags
+
+	6.like song
+
+	7.adjust volume
+
+	8. find cloud connected from in flames and say how many likes it has
+
+	9.share on social media
+
+
+Senario 2 (search results):
+	1.search drinks, happy, rock, rock n roll, night out, hard rock from product page
+
+	2.remove metal, wild, rebellious tags
+
+	3.click preview song list from michael jackson love
+
+	4.read the last tag from the first search result
+
+	5.navigate to Account
+
+
+Senario 3 (Account):
+	1.Navigate to Account (Welcome link , Menu>Account)
+
+	2.Change Username
+
+	3.change password
+
+	4.change preferences: 
+		a.band
+		b.genre
+	5.save changes
+
+	6.navigate to created playlists
+
+
+Senario  4(My Collection):
+	1.activate all filters popup
+
+	2.choose the displayed tags underneath the search results
+	  from the moods and genres list
+
+	3.Apply changes and confirm they took place
+
+	4.uncheck / remove any mood/genre you don't like
+
+	5.slide through any of the 3 categories
+
+	6.create playlist
+
+	7.navigate to home page
+
+
+Senario 5(home page/widget):
+	1.play pause currently playing song
+
+	2.like currently playing song
+
+	3.choose a recommended playlist (goes to product page)
+
+	4.sign out
+
+
+Fix Stuff:
+
+	7.scroll suggestions?

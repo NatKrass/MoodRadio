@@ -1,0 +1,2896 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		 
+		<!-- If IE use the latest rendering engine -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		 
+		<!-- Set the page to the width of the device and set the zoon level -->
+		<meta name="viewport" content="width = device-width, initial-scale = 1">
+		<meta property="og:image" content="http://www.newdesignfile.com/postpic/2013/02/radio-icon_85457.png">
+		<title>Mood Radio / My Collection</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+		<link rel="stylesheet" type="text/css" href="mycollection.css">
+	</head>
+
+	<body>
+		<!-- wrapper -->
+		<div id="wrapper">
+			<!--navbar-->
+			<nav class = "navbar navbar-default">
+				<div class = "container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<div class="dropdown">
+						<!--dropdown menu-->	
+							<button class="btn btn-default dropdown-toggle btn-sm" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="Mood_Radio.html">Home</a></li>
+								<li><a href="Mood_Radio_mycollection.html">My Collection</a></li>
+								<li><a href="Account.html">Account</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="end.html">Sign Out</a></li>
+							</ul>
+						</div>
+
+						<!--Mood Radio logo-->
+						<a class="navbar-brand" href="Mood_Radio.html">
+							<img alt="Mood Radio" src="./images/mood_radio_icon.png">
+							
+							<div class="caption">
+					      		<h2>MOOD RADIO</h2>
+					      	</div>
+						</a>
+
+						<!--search-->
+	    				<div class="input-group pull-right">
+	    					<input type="text" class="form-control" placeholder="Search for Playlist, Song, Artist, User">
+	    					<span class="input-group-btn">
+	       						<a href="Mood_Radio_searchresults.html">
+		       						<button class="btn btn-default" type="button">
+		       							<span class="glyphicon glyphicon-search"></span>
+		       						</button>
+		       					</a>
+	     					</span>
+	   					</div> <!-- /input-group -->
+
+	   					<!--Sign in / Account link-->
+	   					<a class="navbar-text pull-right" href="Account.html">
+	   						<h4>Welcome Team25</h4>
+	   					</a>
+					</div> <!--navbar-header-->
+				</div> <!--container-fluid-->
+			</nav> <!--navbar-->
+
+			<!-- All Filters button -->
+			<div id="overlay">
+				<div class="jumbotron">
+
+					<!--close button-->
+					<div class="close_button">
+						<button class="btn btn-default pull-right"  onclick="off()">
+							<span class="glyphicon glyphicon-remove"></span>
+						</button>
+					</div>	
+
+					<!--search-->
+					<div class="input-group">
+    					<input type="text" class="form-control" placeholder="Search for mood and/or genre">
+    					<span class="input-group-btn">
+       						<button class="btn btn-default" type="button">
+       							<span class="glyphicon glyphicon-search"></span>
+       						</button>
+     					</span>
+	   				</div>
+
+	   				<!--chosen moods / genres tags-->
+	   				<ul class="chosen_tags">
+   						<!--#night out-->
+	   					<!-- <li> 
+	   						<span class="label label-default">
+	   							#night out
+	   							<button class="btn btn-default btn-xs">
+	   								<span class="glyphicon glyphicon-remove"></span>
+	   							</button>	
+	   						</span>
+	   					</li> --><!--night out-->
+	   					<!--#chill-->
+	   					<li id="chilloutchosen">
+	   						<span class="label label-default">
+	   							#chill
+	   							<button class="btn btn-default btn-xs">
+	   								<span class="glyphicon glyphicon-remove"></span>
+	   							</button>	
+	   						</span>
+	   					</li><!--chill-->
+	   					<!--#rebellious-->
+	   					<!-- <li>
+	   						<span class="label label-default">
+	   							#rebellious
+	   							<button class="btn btn-default btn-xs">
+	   								<span class="glyphicon glyphicon-remove"></span>
+	   							</button>	
+	   						</span>
+	   					</li> --><!--rebellious-->
+	   					<!--#90's nostalgia-->
+	   					<!-- <li>
+	   						<span class="label label-default">
+	   							#90's nostalgia
+	   							<button class="btn btn-default btn-xs">
+	   								<span class="glyphicon glyphicon-remove"></span>
+	   							</button>	
+	   						</span>
+	   					</li> --><!--90's nostalgia-->
+	   					<!--#happy-->
+	   					<!-- <li>
+	   						<span class="label label-default">
+	   							#happy
+	   							<button class="btn btn-default btn-xs">
+	   								<span class="glyphicon glyphicon-remove"></span>
+	   							</button>	
+	   						</span>
+	   					</li> --><!--happy-->
+	   					<!--#hangout-->
+	   					<!-- <li>
+	   						<span class="label label-default">
+	   							#hangout
+	   							<button class="btn btn-default btn-xs">
+	   								<span class="glyphicon glyphicon-remove"></span>
+	   							</button>	
+	   						</span>
+	   					</li> --><!--#hangout-->
+	   					<!--#excited-->
+	   					<!-- <li>
+	   						<span class="label label-default">
+	   							#excited
+	   							<button class="btn btn-default btn-xs">
+	   								<span class="glyphicon glyphicon-remove"></span>
+	   							</button>	
+	   						</span>
+	   					</li> --><!--excited-->
+	   					<!--#bar-->
+	   					<!-- <li> 
+	   						<span class="label label-default">
+	   							#bar
+	   							<button class="btn btn-default btn-xs">
+	   								<span class="glyphicon glyphicon-remove"></span>
+	   							</button>	
+	   						</span>
+	   					</li> --><!--bar-->
+	   					<!--#funtimes-->
+	   					<!-- <li>
+	   						<span class="label label-default">
+	   							#funtimes
+	   							<button class="btn btn-default btn-xs">
+	   								<span class="glyphicon glyphicon-remove"></span>
+	   							</button>	
+	   						</span>
+	   					</li> --><!--funtimes-->
+	   					<!--#wild-->
+	   					<!-- <li>
+	   						<span class="label label-default">
+	   							#wild
+	   							<button class="btn btn-default btn-xs">
+	   								<span class="glyphicon glyphicon-remove"></span>
+	   							</button>	
+	   						</span>
+	   					</li> --><!--wild-->
+	   					<!--#metal-->
+	   					<!-- <li>
+	   						<span class="label label-default">
+	   							#metal
+	   							<button class="btn btn-default btn-xs">
+	   								<span class="glyphicon glyphicon-remove"></span>
+	   							</button>	
+	   						</span>
+	   					</li> --><!--metal-->
+   						<!--#rock-->
+	   					<li id="rockchosen"> 
+	   						<span class="label label-default">
+	   							#rock
+	   							<button class="btn btn-default btn-xs">
+	   								<span class="glyphicon glyphicon-remove"></span>
+	   							</button>	
+	   						</span>
+	   					</li><!--rock-->
+   						<!--#progressive-->
+	   					<!-- <li> 
+	   						<span class="label label-default">
+	   							#progressive
+	   							<button class="btn btn-default btn-xs">
+	   								<span class="glyphicon glyphicon-remove"></span>
+	   							</button>	
+	   						</span>
+	   					</li> --><!--progressive-->
+   						<!--#alternative-->
+	   					<!-- <li> 
+	   						<span class="label label-default">
+	   							#alternative
+	   							<button class="btn btn-default btn-xs">
+	   								<span class="glyphicon glyphicon-remove"></span>
+	   							</button>	
+	   						</span>
+	   					</li> --><!--alternative-->
+	   					<!--#hard rock-->
+	   					<!-- <li>
+	   						<span class="label label-default">
+	   							#hard rock
+	   							<button class="btn btn-default btn-xs">
+	   								<span class="glyphicon glyphicon-remove"></span>
+	   							</button>	
+	   						</span>
+	   					</li> --><!--hard rock-->
+	   				</ul>
+
+	   				<div class="filters_header">
+						<div class="moods_header">
+							<h3>Moods</h3>
+						</div>
+						<div class="genres_header">	
+							<h3>Genres</h3>
+						</div>
+					</div>			
+	   				
+	   				<!-- All filters -->
+					<div class="all_filters">
+
+						<!--moods list-->
+						<ul class="allmoods">
+
+							<li> <!-- aggressive -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="aggressive" class="checkbox"/>
+									<label for="aggressive">
+										#aggressive
+									</label>
+								</div> 
+							</li> <!-- aggressive -->
+							<li> <!-- airy-->
+								<div class="checkbox"> 
+									<input type="checkbox" id="airy" class="checkbox"/>
+									<label for="airy">
+										#airy
+									</label>
+								</div> 
+							</li> <!-- airy -->
+							<li> <!-- angry -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="angry" class="checkbox"/>
+									<label for="angry">
+										#angry
+									</label>
+								</div> 
+							</li> <!-- angry -->
+							<li> <!-- angst -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="angst" class="checkbox"/>
+									<label for="angst">
+										#angst
+									</label>
+								</div> 
+							</li> <!-- angst -->
+							<li> <!-- apocalyptic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="apocalyptic" class="checkbox"/>
+									<label for="apocalyptic">
+										#apocalyptic
+									</label>
+								</div> 
+							</li> <!-- apocalyptic -->
+							<li> <!-- athletic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="athletic" class="checkbox"/>
+									<label for="athletic">
+										#athletic
+									</label>
+								</div> 
+							</li> <!-- athletic -->
+							<li> <!-- atmospheric -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="atmospheric" class="checkbox"/>
+									<label for="atmospheric">
+										#atmospheric
+									</label>
+								</div> 
+							</li> <!-- atmospheric -->
+							<li> <!-- autumnal -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="autumnal" class="checkbox"/>
+									<label for="autumnal">
+										#autumnal
+									</label>
+								</div> 
+							</li> <!-- autumnal -->
+							<li> <!-- bar -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="bar" class="checkbox"/>
+									<label for="bar">
+										#bar
+									</label>
+								</div> 
+							</li> <!-- bar -->
+							<li> <!-- bitter -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="bitter" class="checkbox"/>
+									<label for="bitter">
+										#bitter
+									</label>
+								</div> 
+							</li> <!-- bitter -->
+							<li> <!-- bleak -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="bleak" class="checkbox"/>
+									<label for="bleak">
+										#bleak
+									</label>
+								</div> 
+							</li> <!-- bleak -->
+							<li> <!-- bombastic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="bombastic" class="checkbox"/>
+									<label for="bombastic">
+										#bombastic
+									</label>
+								</div> 
+							</li> <!-- bombastic -->
+							<li> <!-- brash -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="brash" class="checkbox"/>
+									<label for="brash">
+										#brash
+									</label>
+								</div> 
+							</li> <!-- brash -->
+							<li> <!-- bravado -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="bravado" class="checkbox"/>
+									<label for="bravado">
+										#bravado
+									</label>
+								</div> 
+							</li> <!-- bravado -->
+							<li> <!-- bright -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="bright" class="checkbox"/>
+									<label for="bright">
+										#bright
+									</label>
+								</div> 
+							</li> <!-- bright -->
+							<li> <!-- brooding -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="brooding" class="checkbox"/>
+									<label for="brooding">
+										#brooding
+									</label>
+								</div> 
+							</li> <!-- brooding -->
+							<li> <!-- calm -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="calm" class="checkbox"/>
+									<label for="calm">
+										#calm
+									</label>
+								</div> 
+							</li> <!-- calm -->
+							<li> <!-- campy -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="campy" class="checkbox"/>
+									<label for="campy">
+										#campy
+									</label>
+								</div> 
+							</li> <!-- campy -->
+							<li> <!-- carefree -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="carefree" class="checkbox"/>
+									<label for="carefree">
+										#carefree
+									</label>
+								</div> 
+							</li> <!-- carefree -->
+							<li> <!-- celebratory -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="celebratory" class="checkbox"/>
+									<label for="celebratory">
+										#celebratory
+									</label>
+								</div> 
+							</li> <!-- celebratory -->
+							<li> <!-- cheerful -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="cheerful" class="checkbox"/>
+									<label for="cheerful">
+										#cheerful
+									</label>
+								</div> 
+							</li> <!-- cheerful -->
+							<li id="chillouttrigger"> <!-- chill -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="chill" class="checkbox"/>
+									<label for="chill">
+										#chill
+									</label>
+								</div> 
+							</li> <!-- chill -->
+							<li> <!-- cold -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="cold" class="checkbox"/>
+									<label for="cold">
+										#cold
+									</label>
+								</div> 
+							</li> <!-- cold -->
+							<li> <!-- comic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="comic" class="checkbox"/>
+									<label for="comic">
+										#comic
+									</label>
+								</div> 
+							</li> <!-- comic -->
+							<li> <!-- confident -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="confident" class="checkbox"/>
+									<label for="confident">
+										#confident
+									</label>
+								</div> 
+							</li> <!-- confident -->
+							<li> <!-- cynical -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="cynical" class="checkbox"/>
+									<label for="cynical">
+										#cynical
+									</label>
+								</div> 
+							</li> <!-- cynical -->
+							<li> <!-- dark -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="dark" class="checkbox"/>
+									<label for="dark">
+										#dark
+									</label>
+								</div> 
+							</li> <!-- dark -->
+							<li> <!-- defiant -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="defiant" class="checkbox"/>
+									<label for="defiant">
+										#defiant
+									</label>
+								</div> 
+							</li> <!-- defiant -->
+							<li> <!-- demonic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="demonic" class="checkbox"/>
+									<label for="demonic">
+										#demonic
+									</label>
+								</div> 
+							</li> <!-- demonic -->
+							<li> <!-- desperate -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="desperate" class="checkbox"/>
+									<label for="desperate">
+										#desperate
+									</label>
+								</div> 
+							</li> <!-- desperate -->
+							<li> <!-- difficult -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="difficult" class="checkbox"/>
+									<label for="difficult">
+										#difficult
+									</label>
+								</div> 
+							</li> <!-- difficult -->
+							<li> <!-- dramatic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="dramatic" class="checkbox"/>
+									<label for="dramatic">
+										#dramatic
+									</label>
+								</div> 
+							</li> <!-- dramatic -->
+							<li> <!-- dreamy -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="dreamy" class="checkbox"/>
+									<label for="dreamy">
+										#dreamy
+									</label>
+								</div> 
+							</li> <!-- dreamy -->
+							<li> <!-- drinks -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="drinks" class="checkbox"/>
+									<label for="drinks">
+										#drinks
+									</label>
+								</div> 
+							</li> <!-- drinks -->
+							<li> <!-- driving -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="driving" class="checkbox"/>
+									<label for="driving">
+										#driving
+									</label>
+								</div> 
+							</li> <!-- driving -->
+							<li> <!-- earthy -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="earthy" class="checkbox"/>
+									<label for="earthy">
+										#earthy
+									</label>
+								</div> 
+							</li> <!-- earthy -->
+							<li> <!-- eccentric -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="eccentric" class="checkbox"/>
+									<label for="eccentric">
+										#eccentric
+									</label>
+								</div> 
+							</li> <!-- eccentric -->
+							<li> <!-- ecstatic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="ecstatic" class="checkbox"/>
+									<label for="ecstatic">
+										#ecstatic
+									</label>
+								</div> 
+							</li> <!-- ecstatic -->
+							<li> <!-- eerie -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="eerie" class="checkbox"/>
+									<label for="eerie">
+										#eerie
+									</label>
+								</div> 
+							</li> <!-- eerie -->
+							<li> <!-- energetic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="energetic" class="checkbox"/>
+									<label for="energetic">
+										#energetic
+									</label>
+								</div> 
+							</li> <!-- energetic -->
+							<li> <!-- epic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="epic" class="checkbox"/>
+									<label for="epic">
+										#epic
+									</label>
+								</div> 
+							</li> <!-- epic -->
+							<li> <!-- erotic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="erotic" class="checkbox"/>
+									<label for="erotic">
+										#erotic
+									</label>
+								</div> 
+							</li> <!-- erotic -->
+							<li> <!-- ethereal -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="ethereal" class="checkbox"/>
+									<label for="ethereal">
+										#ethereal
+									</label>
+								</div> 
+							</li> <!-- ethereal -->
+							<li> <!-- euphoric -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="euphoric" class="checkbox"/>
+									<label for="euphoric">
+										#euphoric
+									</label>
+								</div> 
+							</li> <!-- euphoric -->
+							<li> <!-- exciting -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="exciting" class="checkbox"/>
+									<label for="exciting">
+										#exciting
+									</label>
+								</div> 
+							</li> <!-- exciting -->
+							<li> <!-- exotic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="exotic" class="checkbox"/>
+									<label for="exotic">
+										#exotic
+									</label>
+								</div> 
+							</li> <!-- exotic -->
+							<li> <!-- explosive -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="explosive" class="checkbox"/>
+									<label for="explosive">
+										#explosive
+									</label>
+								</div> 
+							</li> <!-- explosive -->
+							<li> <!-- fantastic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="fantastic" class="checkbox"/>
+									<label for="fantastic">
+										#fantastic
+									</label>
+								</div> 
+							</li> <!-- fantastic -->
+							<li> <!-- feral -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="feral" class="checkbox"/>
+									<label for="feral">
+										#feral
+									</label>
+								</div> 
+							</li> <!-- feral -->
+							<li> <!-- fiery -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="fiery" class="checkbox"/>
+									<label for="fiery">
+										#fiery
+									</label>
+								</div> 
+							</li> <!-- fiery -->
+							<li> <!-- flashy -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="flashy" class="checkbox"/>
+									<label for="flashy">
+										#flashy
+									</label>
+								</div> 
+							</li> <!-- flashy -->
+							<li> <!-- funtimes -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="funtimes" class="checkbox"/>
+									<label for="funtimes">
+										#funtimes
+									</label>
+								</div> 
+							</li> <!-- funtimes -->
+							<li> <!-- gentle -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="gentle" class="checkbox"/>
+									<label for="gentle">
+										#gentle
+									</label>
+								</div> 
+							</li> <!-- gentle -->
+							<li> <!-- gloomy -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="gloomy" class="checkbox"/>
+									<label for="gloomy">
+										#gloomy
+									</label>
+								</div> 
+							</li> <!-- gloomy -->
+							<li> <!-- graceful -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="graceful" class="checkbox"/>
+									<label for="graceful">
+										#graceful
+									</label>
+								</div> 
+							</li> <!-- graceful -->
+							<li> <!-- grim -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="grim" class="checkbox"/>
+									<label for="grim">
+										#grim
+									</label>
+								</div> 
+							</li> <!-- grim -->
+							<li> <!-- gutsy -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="gutsy" class="checkbox"/>
+									<label for="gutsy">
+										#gutsy
+									</label>
+								</div> 
+							</li> <!-- gutsy -->
+							<li> <!-- happy -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="happy" class="checkbox"/>
+									<label for="happy">
+										#happy
+									</label>
+								</div> 
+							</li> <!-- happy -->
+							<li> <!-- hangout -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="hangout" class="checkbox"/>
+									<label for="hangout">
+										#hangout
+									</label>
+								</div> 
+							</li> <!-- hangout -->
+							<li> <!-- heroic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="heroic" class="checkbox"/>
+									<label for="heroic">
+										#heroic
+									</label>
+								</div> 
+							</li> <!-- heroic -->
+							<li> <!-- humorous -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="humorous" class="checkbox"/>
+									<label for="humorous">
+										#humorous
+									</label>
+								</div> 
+							</li> <!-- humorous -->
+							<li> <!-- hyper -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="hyper" class="checkbox"/>
+									<label for="hyper">
+										#hyper
+									</label>
+								</div> 
+							</li> <!-- hyper -->
+							<li> <!-- hypnotic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="hypnotic" class="checkbox"/>
+									<label for="hypnotic">
+										#hypnotic
+									</label>
+								</div> 
+							</li> <!-- hypnotic -->
+							<li> <!-- innocent -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="innocent" class="checkbox"/>
+									<label for="innocent">
+										#innocent
+									</label>
+								</div> 
+							</li> <!-- innocent -->
+							<li> <!-- intense -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="intense" class="checkbox"/>
+									<label for="intense">
+										#intense
+									</label>
+								</div> 
+							</li> <!-- intense -->
+							<li> <!-- laid-back -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="laid-back" class="checkbox"/>
+									<label for="laid-back">
+										#laid-back
+									</label>
+								</div> 
+							</li> <!-- laid-back -->
+							<li> <!-- lazy -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="lazy" class="checkbox"/>
+									<label for="lazy">
+										#lazy
+									</label>
+								</div> 
+							</li> <!-- lazy -->
+							<li> <!-- light -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="light" class="checkbox"/>
+									<label for="light">
+										#light
+									</label>
+								</div> 
+							</li> <!-- light -->
+							<li> <!-- lively -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="lively" class="checkbox"/>
+									<label for="lively">
+										#lively
+									</label>
+								</div> 
+							</li> <!-- lively -->
+							<li> <!-- lonely -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="lonely" class="checkbox"/>
+									<label for="lonely">
+										#lonely
+									</label>
+								</div> 
+							</li> <!-- lonely -->
+							<li> <!-- macabre -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="macabre" class="checkbox"/>
+									<label for="macabre">
+										#macabre
+									</label>
+								</div> 
+							</li> <!-- macabre -->
+							<li> <!-- magical -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="magical" class="checkbox"/>
+									<label for="magical">
+										#magical
+									</label>
+								</div> 
+							</li> <!-- magical -->
+							<li> <!-- majestic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="majestic" class="checkbox"/>
+									<label for="majestic">
+										#majestic
+									</label>
+								</div> 
+							</li> <!-- majestic -->
+							<li> <!-- marching -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="marching" class="checkbox"/>
+									<label for="marching">
+										#marching
+									</label>
+								</div> 
+							</li> <!-- marching -->
+							<li> <!-- meditative -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="meditative" class="checkbox"/>
+									<label for="meditative">
+										#meditative
+									</label>
+								</div> 
+							</li> <!-- meditative -->
+							<li> <!-- melancholy -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="melancholy" class="checkbox"/>
+									<label for="melancholy">
+										#melancholy
+									</label>
+								</div> 
+							</li> <!-- melancholy -->
+							<li> <!-- menacing -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="menacing" class="checkbox"/>
+									<label for="menacing">
+										#menacing
+									</label>
+								</div> 
+							</li> <!-- menacing -->
+							<li> <!-- messy -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="messy" class="checkbox"/>
+									<label for="messy">
+										#messy
+									</label>
+								</div> 
+							</li> <!-- messy -->
+							<li> <!-- mighty -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="mighty" class="checkbox"/>
+									<label for="mighty">
+										#mighty
+									</label>
+								</div> 
+							</li> <!-- mighty -->
+							<li> <!-- negative -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="negative" class="checkbox"/>
+									<label for="negative">
+										#negative
+									</label>
+								</div> 
+							</li> <!-- negative -->
+							<li> <!-- nervous -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="nervous" class="checkbox"/>
+									<label for="nervous">
+										#nervous
+									</label>
+								</div> 
+							</li> <!-- nervous -->
+							<li> <!-- night out -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="nightout" class="checkbox"/>
+									<label for="night out">
+										#night out
+									</label>
+								</div> 
+							</li> <!-- night out -->
+							<li> <!-- nostalgic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="nostalgic" class="checkbox"/>
+									<label for="nostalgic">
+										#nostalgic
+									</label>
+								</div> 
+							</li> <!-- nostalgic -->
+							<li> <!-- 90's nostalgia -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="90snostalgia" class="checkbox"/>
+									<label for="90's nostalgia">
+										#90's nostalgia
+									</label>
+								</div> 
+							</li> <!-- 90's nostalgia -->
+							<li> <!-- 80's nostalgia -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="80's nostalgia" class="checkbox"/>
+									<label for="80's nostalgia">
+										#80's nostalgia
+									</label>
+								</div> 
+							</li> <!-- 80's nostalgia -->
+							<li> <!-- 70's nostalgia -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="70's nostalgia" class="checkbox"/>
+									<label for="70's nostalgia">
+										#70's nostalgia
+									</label>
+								</div> 
+							</li> <!-- 70's nostalgia -->
+							<li> <!-- 60's nostalgia -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="60's nostalgia" class="checkbox"/>
+									<label for="60's nostalgia">
+										#60's nostalgia
+									</label>
+								</div> 
+							</li> <!-- 60's nostalgia -->
+							<li> <!-- 50's nostalgia -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="50's nostalgia" class="checkbox"/>
+									<label for="50's nostalgia">
+										#50's nostalgia
+									</label>
+								</div> 
+							</li> <!-- 50's nostalgia -->
+							<li> <!-- 40's nostalgia -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="40's nostalgia" class="checkbox"/>
+									<label for="40's nostalgia">
+										#40's nostalgia
+									</label>
+								</div> 
+							</li> <!-- 40's nostalgia -->
+							<li> <!-- 30's nostalgia -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="30's nostalgia" class="checkbox"/>
+									<label for="30's nostalgia">
+										#30's nostalgia
+									</label>
+								</div> 
+							</li> <!-- 30's nostalgia -->
+							<li> <!-- outraged -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="outraged" class="checkbox"/>
+									<label for="outraged">
+										#outraged
+									</label>
+								</div> 
+							</li> <!-- outraged -->
+							<li> <!-- paranoid -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="paranoid" class="checkbox"/>
+									<label for="paranoid">
+										#paranoid
+									</label>
+								</div> 
+							</li> <!-- paranoid -->
+							<li> <!-- passionate -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="passionate" class="checkbox"/>
+									<label for="passionate">
+										#passionate
+									</label>
+								</div> 
+							</li> <!-- passionate -->
+							<li> <!-- playful -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="playful" class="checkbox"/>
+									<label for="playful">
+										#playful
+									</label>
+								</div> 
+							</li> <!-- playful -->
+							<li> <!-- positive -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="positive" class="checkbox"/>
+									<label for="positive">
+										#positive
+									</label>
+								</div> 
+							</li> <!-- positive -->
+							<li> <!-- powerful -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="powerful" class="checkbox"/>
+									<label for="powerful">
+										#powerful
+									</label>
+								</div> 
+							</li> <!-- powerful -->
+							<li> <!-- provocative -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="provocative" class="checkbox"/>
+									<label for="provocative">
+										#provocative
+									</label>
+								</div> 
+							</li> <!-- provocative -->
+							<li> <!-- pure -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="pure" class="checkbox"/>
+									<label for="pure">
+										#pure
+									</label>
+								</div> 
+							</li> <!-- pure -->
+							<li> <!-- rebellious -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="rebellious" class="checkbox"/>
+									<label for="rebellious">
+										#rebellious
+									</label>
+								</div> 
+							</li> <!-- rebellious -->
+							<li> <!-- reckless -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="reckless" class="checkbox"/>
+									<label for="reckless">
+										#reckless
+									</label>
+								</div> 
+							</li> <!-- reckless -->
+							<li> <!-- regretful -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="regretful" class="checkbox"/>
+									<label for="regretful">
+										#regretful
+									</label>
+								</div> 
+							</li> <!-- regretful -->
+							<li> <!-- relaxed -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="relaxed" class="checkbox"/>
+									<label for="relaxed">
+										#relaxed
+									</label>
+								</div> 
+							</li> <!-- relaxed -->
+							<li> <!-- reserved -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="reserved" class="checkbox"/>
+									<label for="reserved">
+										#reserved
+									</label>
+								</div> 
+							</li> <!-- reserved -->
+							<li> <!-- resolute -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="resolute" class="checkbox"/>
+									<label for="resolute">
+										#resolute
+									</label>
+								</div> 
+							</li> <!-- resolute -->
+							<li> <!-- rhapsodic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="rhapsodic" class="checkbox"/>
+									<label for="rhapsodic">
+										#rhapsodic
+									</label>
+								</div> 
+							</li> <!-- rhapsodic -->
+							<li> <!-- romantic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="romantic" class="checkbox"/>
+									<label for="romantic">
+										#romantic
+									</label>
+								</div> 
+							</li> <!-- romantic -->
+							<li> <!-- sad -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="sad" class="checkbox"/>
+									<label for="sad">
+										#sad
+									</label>
+								</div> 
+							</li> <!-- sad -->
+							<li> <!-- savage -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="savage" class="checkbox"/>
+									<label for="savage">
+										#savage
+									</label>
+								</div> 
+							</li> <!-- savage -->
+							<li> <!-- scary -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="scary" class="checkbox"/>
+									<label for="scary">
+										#scary
+									</label>
+								</div> 
+							</li> <!-- scary -->
+							<li> <!-- sensual -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="sensual" class="checkbox"/>
+									<label for="sensual">
+										#sensual
+									</label>
+								</div> 
+							</li> <!-- sensual -->
+							<li> <!-- sexy -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="sexy" class="checkbox"/>
+									<label for="sexy">
+										#sexy
+									</label>
+								</div> 
+							</li> <!-- sexy -->
+							<li> <!-- sentimental -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="sentimental" class="checkbox"/>
+									<label for="sentimental">
+										#sentimental
+									</label>
+								</div> 
+							</li> <!-- sentimental -->
+							<li> <!-- serious -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="serious" class="checkbox"/>
+									<label for="serious">
+										#serious
+									</label>
+								</div> 
+							</li> <!-- serious -->
+							<li> <!-- silly -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="silly" class="checkbox"/>
+									<label for="silly">
+										#silly
+									</label>
+								</div> 
+							</li> <!-- silly -->
+							<li> <!-- smooth -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="smooth" class="checkbox"/>
+									<label for="smooth">
+										#smooth
+									</label>
+								</div> 
+							</li> <!-- smooth -->
+							<li> <!-- soothing -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="soothing" class="checkbox"/>
+									<label for="soothing">
+										#soothing
+									</label>
+								</div> 
+							</li> <!-- soothing -->
+							<li> <!-- spacey -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="spacey" class="checkbox"/>
+									<label for="spacey">
+										#spacey
+									</label>
+								</div> 
+							</li> <!-- spacey -->
+							<li> <!-- spiritual -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="spiritual" class="checkbox"/>
+									<label for="spiritual">
+										#spiritual
+									</label>
+								</div> 
+							</li> <!-- spiritual -->
+							<li> <!-- spring -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="spring" class="checkbox"/>
+									<label for="spring">
+										#spring
+									</label>
+								</div> 
+							</li> <!-- spring -->
+							<li> <!-- street -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="street" class="checkbox"/>
+									<label for="street">
+										#street
+									</label>
+								</div> 
+							</li> <!-- street -->
+							<li> <!-- strong -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="strong" class="checkbox"/>
+									<label for="strong">
+										#strong
+									</label>
+								</div> 
+							</li> <!-- strong -->
+							<li> <!-- summer -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="summer" class="checkbox"/>
+									<label for="summer">
+										#summer
+									</label>
+								</div> 
+							</li> <!-- summer -->
+							<li> <!-- swag -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="swag" class="checkbox"/>
+									<label for="swag">
+										#swag
+									</label>
+								</div> 
+							</li> <!-- swag -->
+							<li> <!-- sweet -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="sweet" class="checkbox"/>
+									<label for="sweet">
+										#sweet
+									</label>
+								</div> 
+							</li> <!-- sweet -->
+							<li> <!-- tender -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="tender" class="checkbox"/>
+									<label for="tender">
+										#tender
+									</label>
+								</div> 
+							</li> <!-- tender -->
+							<li> <!-- theatrical -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="theatrical" class="checkbox"/>
+									<label for="theatrical">
+										#theatrical
+									</label>
+								</div> 
+							</li> <!-- theatrical -->
+							<li> <!-- threatening -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="threatening" class="checkbox"/>
+									<label for="threatening">
+										#threatening
+									</label>
+								</div> 
+							</li> <!-- threatening -->
+							<li> <!-- thrilling -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="thrilling" class="checkbox"/>
+									<label for="thrilling">
+										#thrilling
+									</label>
+								</div> 
+							</li> <!-- thrilling -->
+							<li> <!-- tragic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="tragic" class="checkbox"/>
+									<label for="tragic">
+										#tragic
+									</label>
+								</div> 
+							</li> <!-- tragic -->
+							<li> <!-- trashy -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="trashy" class="checkbox"/>
+									<label for="trashy">
+										#trashy
+									</label>
+								</div> 
+							</li> <!-- trashy -->
+							<li> <!-- traveling -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="traveling" class="checkbox"/>
+									<label for="traveling">
+										#traveling
+									</label>
+								</div> 
+							</li> <!-- traveling -->
+							<li> <!-- trippy -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="trippy" class="checkbox"/>
+									<label for="trippy">
+										#trippy
+									</label>
+								</div> 
+							</li> <!-- trippy -->
+							<li> <!-- triumphant -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="triumphant" class="checkbox"/>
+									<label for="triumphant">
+										#triumphant
+									</label>
+								</div> 
+							</li> <!-- triumphant -->
+							<li> <!-- unsettling -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="unsettling" class="checkbox"/>
+									<label for="unsettling">
+										#unsettling
+									</label>
+								</div> 
+							</li> <!-- unsettling -->
+							<li> <!-- uplifting -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="uplifting" class="checkbox"/>
+									<label for="uplifting">
+										#uplifting
+									</label>
+								</div> 
+							</li> <!-- uplifting -->
+							<li> <!-- warm -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="warm" class="checkbox"/>
+									<label for="warm">
+										#warm
+									</label>
+								</div> 
+							</li> <!-- warm -->
+							<li> <!-- wintry -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="wintry" class="checkbox"/>
+									<label for="wintry">
+										#wintry
+									</label>
+								</div> 
+							</li> <!-- wintry -->
+							<li> <!-- wistful -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="wistful" class="checkbox"/>
+									<label for="wistful">
+										#wistful
+									</label>
+								</div> 
+							</li> <!-- wistful -->
+							<li> <!-- wild -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="wild" class="checkbox"/>
+									<label for="wild">
+										#wild
+									</label>
+								</div> 
+							</li> <!-- wild -->
+
+						</ul> <!--All moods list-->
+
+						<!-- All genres list -->
+						<ul class="allgenres">
+
+							<li> <!-- a capella -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="a_capella" class="checkbox"/>
+									<label for="a_capella">
+										#a capella
+									</label>
+								</div> 
+							</li> <!-- a capella -->
+							<li> <!-- acoustic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="acoustic" class="checkbox"/>
+									<label for="acoustic">
+										#acoustic
+									</label>
+								</div> 
+							</li> <!-- acoustic -->
+							<li> <!-- alternative -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="alternative" class="checkbox"/>
+									<label for="alternative">
+										#alternative
+									</label>
+								</div> 
+							</li> <!-- alternative -->
+							<li> <!-- ambient -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="ambient" class="checkbox"/>
+									<label for="ambient">
+										#ambient
+									</label>
+								</div> 
+							</li> <!-- ambient -->
+							<li> <!-- anime -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="anime" class="checkbox"/>
+									<label for="anime">
+										#anime
+									</label>
+								</div> 
+							</li> <!-- anime -->
+							<li> <!-- avant-garde -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="avant-garde" class="checkbox"/>
+									<label for="avant-garde">
+										#avant-garde
+									</label>
+								</div> 
+							</li> <!-- avant-garde -->
+							<li> <!-- black metal -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="black_metal" class="checkbox"/>
+									<label for="black_metal">
+										#black metal
+									</label>
+								</div> 
+							</li> <!-- black metal -->
+							<li> <!-- blues -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="blues" class="checkbox"/>
+									<label for="blues">
+										#blues
+									</label>
+								</div> 
+							</li> <!-- blues -->
+							<li> <!-- chillstep -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="chillstep" class="checkbox"/>
+									<label for="chillstep">
+										#chillstep
+									</label>
+								</div> 
+							</li> <!-- chillstep -->
+							<li> <!-- children's -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="children's" class="checkbox"/>
+									<label for="children's">
+										#children's
+									</label>
+								</div> 
+							</li> <!-- children's -->
+							<li> <!-- christmas -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="christmas" class="checkbox"/>
+									<label for="christmas">
+										#christmas
+									</label>
+								</div> 
+							</li> <!-- christmas -->
+							<li> <!-- classical -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="classical" class="checkbox"/>
+									<label for="classical">
+										#classical
+									</label>
+								</div> 
+							</li> <!-- classical -->
+							<li> <!-- club -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="club" class="checkbox"/>
+									<label for="club">
+										#club
+									</label>
+								</div> 
+							</li> <!-- club -->
+							<li> <!-- commercial -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="commercial" class="checkbox"/>
+									<label for="commercial">
+										#commercial
+									</label>
+								</div> 
+							</li> <!-- commercial -->
+							<li> <!-- contemporary -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="contemporary" class="checkbox"/>
+									<label for="contemporary">
+										#contemporary
+									</label>
+								</div> 
+							</li> <!-- contemporary -->
+							<li> <!-- country -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="country" class="checkbox"/>
+									<label for="country">
+										#country
+									</label>
+								</div> 
+							</li> <!-- country -->
+							<li> <!-- dance -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="dance" class="checkbox"/>
+									<label for="dance">
+										#dance
+									</label>
+								</div> 
+							</li> <!-- dance -->
+							<li> <!-- disney -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="disney" class="checkbox"/>
+									<label for="disney">
+										#disney
+									</label>
+								</div> 
+							</li> <!-- disney -->
+							<li> <!-- doom metal -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="doom_metal" class="checkbox"/>
+									<label for="doom_metal">
+										#doom metal
+									</label>
+								</div> 
+							</li> <!-- doom metal -->
+							<li> <!-- dubstep -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="dubstep" class="checkbox"/>
+									<label for="dubstep">
+										#dubstep
+									</label>
+								</div> 
+							</li> <!-- dubstep -->
+							<li> <!-- folk -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="folk" class="checkbox"/>
+									<label for="folk">
+										#folk
+									</label>
+								</div> 
+							</li> <!-- folk -->
+							<li> <!-- easy listening -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="easy_listening" class="checkbox"/>
+									<label for="easy _listening">
+										#easy listening
+									</label>
+								</div> 
+							</li> <!-- easy listening -->
+							<li> <!-- electronic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="electronic" class="checkbox"/>
+									<label for="electronic">
+										#electronic
+									</label>
+								</div> 
+							</li> <!-- electronic -->
+							<li> <!-- enka -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="enka" class="checkbox"/>
+									<label for="enka">
+										#enka
+									</label>
+								</div> 
+							</li> <!-- enka -->
+							<li> <!-- garage -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="garage" class="checkbox"/>
+									<label for="garage">
+										#garage
+									</label>
+								</div> 
+							</li> <!-- garage -->
+							<li> <!-- glam -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="glam" class="checkbox"/>
+									<label for="glam">
+										#glam
+									</label>
+								</div> 
+							</li> <!-- glam -->
+							<li> <!-- gospel -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="gospel" class="checkbox"/>
+									<label for="gospel">
+										#gospel
+									</label>
+								</div> 
+							</li> <!-- gospel -->
+							<li> <!-- goth -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="goth" class="checkbox"/>
+									<label for="goth">
+										#goth
+									</label>
+								</div> 
+							</li> <!-- goth -->
+							<li> <!-- grudge -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="grudge" class="checkbox"/>
+									<label for="grudge">
+										#grudge
+									</label>
+								</div> 
+							</li> <!-- grudge -->
+							<li> <!-- gypsy -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="gypsy" class="checkbox"/>
+									<label for="gypsy">
+										#gypsy
+									</label>
+								</div> 
+							</li> <!-- gypsy -->
+							<li> <!-- hard rock -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="hard_rock" class="checkbox"/>
+									<label for="hard_rock">
+										#hard rock
+									</label>
+								</div> 
+							</li> <!-- hard rock -->
+							<li> <!-- hip hop -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="hip_hop" class="checkbox"/>
+									<label for="hip_hop">
+										#hip hop
+									</label>
+								</div> 
+							</li> <!-- hip hop -->
+							<li> <!-- house -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="house" class="checkbox"/>
+									<label for="house">
+										#house
+									</label>
+								</div> 
+							</li> <!-- house -->
+							<li> <!-- indie -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="indie" class="checkbox"/>
+									<label for="indie">
+										#indie
+									</label>
+								</div> 
+							</li> <!-- indie -->
+							<li> <!-- industrial -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="industrial" class="checkbox"/>
+									<label for="industrial">
+										#industrial
+									</label>
+								</div> 
+							</li> <!-- industrial -->
+							<li> <!-- Instrumental -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="Instrumental" class="checkbox"/>
+									<label for="Instrumental">
+										#Instrumental
+									</label>
+								</div> 
+							</li> <!-- Instrumental -->
+							<li> <!-- j-pop -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="j-pop" class="checkbox"/>
+									<label for="j-pop">
+										#j-pop
+									</label>
+								</div> 
+							</li> <!-- j-pop -->
+							<li> <!-- jazz -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="jazz" class="checkbox"/>
+									<label for="jazz">
+										#jazz
+									</label>
+								</div> 
+							</li> <!-- jazz -->
+							<li> <!-- k-pop -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="k-pop" class="checkbox"/>
+									<label for="k-pop">
+										#k-pop
+									</label>
+								</div> 
+							</li> <!-- k-pop -->
+							<li> <!-- karaoke -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="karaoke" class="checkbox"/>
+									<label for="karaoke">
+										#karaoke
+									</label>
+								</div> 
+							</li> <!-- karaoke -->
+							<li> <!-- latin -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="latin" class="checkbox"/>
+									<label for="latin">
+										#latin
+									</label>
+								</div> 
+							</li> <!-- latin -->
+							<li> <!-- lounge -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="lounge" class="checkbox"/>
+									<label for="lounge">
+										#lounge
+									</label>
+								</div> 
+							</li> <!-- lounge -->
+							<li> <!-- metal -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="metal" class="checkbox"/>
+									<label for="metal">
+										#metal
+									</label>
+								</div> 
+							</li> <!-- metal -->
+							<li> <!-- new age -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="new_age" class="checkbox"/>
+									<label for="new-age">
+										#new age
+									</label>
+								</div> 
+							</li> <!-- new age -->
+							<li> <!-- new wave -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="new_wave" class="checkbox"/>
+									<label for="new_wave">
+										#new wave
+									</label>
+								</div> 
+							</li> <!-- new wave -->
+							<li> <!-- nu metal -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="nu_metal" class="checkbox"/>
+									<label for="nu _metal">
+										#nu metal
+									</label>
+								</div> 
+							</li> <!-- nu metal -->
+							<li> <!-- opera -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="opera" class="checkbox"/>
+									<label for="opera">
+										#opera
+									</label>
+								</div> 
+							</li> <!-- opera -->
+							<li> <!-- orchestral -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="orchestral" class="checkbox"/>
+									<label for="orchestral">
+										#orchestral
+									</label>
+								</div> 
+							</li> <!-- orchestral -->
+							<li> <!-- pop -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="pop" class="checkbox"/>
+									<label for="pop">
+										#pop
+									</label>
+								</div> 
+							</li> <!-- pop -->
+							<li> <!-- post punk -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="post_punk" class="checkbox"/>
+									<label for="post_punk">
+										#post punk
+									</label>
+								</div> 
+							</li> <!-- post punk -->
+							<li> <!-- progressive -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="progressive" class="checkbox"/>
+									<label for="progressive">
+										#progressive
+									</label>
+								</div> 
+							</li> <!-- progressive -->
+							<li> <!-- psychedelic -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="psychedelic" class="checkbox"/>
+									<label for="psychedelic">
+										#psychedelic
+									</label>
+								</div> 
+							</li> <!-- psychedelic -->
+							<li> <!-- punk -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="punk" class="checkbox"/>
+									<label for="punk">
+										#punk
+									</label>
+								</div> 
+							</li> <!-- punk -->
+							<li> <!-- rap -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="rap" class="checkbox"/>
+									<label for="rap">
+										#rap
+									</label>
+								</div> 
+							</li> <!-- rap -->
+							<li> <!-- r'n'b -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="r'n'b" class="checkbox"/>
+									<label for="r'n'b">
+										#r'n'b
+									</label>
+								</div> 
+							</li> <!-- r'n'b -->
+							<li> <!-- reggae -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="reggae" class="checkbox"/>
+									<label for="reggae">
+										#reggae
+									</label>
+								</div> 
+							</li> <!-- reggae -->
+							<li id="rocktrigger"> <!-- rock -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="rock" class="checkbox"/>
+									<label for="rock">
+										#rock
+									</label>
+								</div> 
+							</li> <!-- rock -->
+							<li> <!-- rock'n'roll -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="rock'n'roll" class="checkbox"/>
+									<label for="rock'n'roll">
+										#rock'n'roll
+									</label>
+								</div> 
+							</li> <!-- rock'n'roll -->
+							<li> <!-- soul -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="soul" class="checkbox"/>
+									<label for="soul">
+										#soul
+									</label>
+								</div> 
+							</li> <!-- soul -->
+							<li> <!-- soundtrack -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="soundtrack" class="checkbox"/>
+									<label for="soundtrack">
+										#soundtrack
+									</label>
+								</div> 
+							</li> <!-- soundtrack -->
+							<li> <!-- spoken word -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="spoken_word" class="checkbox"/>
+									<label for="spoken_word">
+										#spoken word
+									</label>
+								</div> 
+							</li> <!-- spoken word -->
+							<li> <!-- stoner -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="stoner" class="checkbox"/>
+									<label for="stoner">
+										#stoner
+									</label>
+								</div> 
+							</li> <!-- stoner -->
+							<li> <!-- swing -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="swing" class="checkbox"/>
+									<label for="swing">
+										#swing
+									</label>
+								</div> 
+							</li> <!-- swing -->
+							<li> <!-- techno -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="techno" class="checkbox"/>
+									<label for="techno">
+										#techno
+									</label>
+								</div> 
+							</li> <!-- techno -->
+							<li> <!-- traditional -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="traditional" class="checkbox"/>
+									<label for="traditional">
+										#traditional
+									</label>
+								</div> 
+							</li> <!-- traditional -->
+							<li> <!-- trap -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="trap" class="checkbox"/>
+									<label for="trap">
+										#trap
+									</label>
+								</div> 
+							</li> <!-- trap -->
+							<li> <!-- trip hop -->
+								<div class="checkbox"> 
+									<input type="checkbox" id="trip_hop" class="checkbox"/>
+									<label for="trip_hop">
+										#trip hop
+									</label>
+								</div> 
+							</li> <!-- trip hop -->
+						</ul> <!-- All genres list -->
+
+					</div> <!--All filters-->
+
+					<!--Apply button-->
+					<div class="apply">
+						<button class="btn btn-default btn-md" onclick="off()">
+							<h3>Apply</h3>
+						</button>
+					</div>
+				</div>	<!--jumbotron-->
+			</div>	<!--overlay-->
+
+			<div class="allfilters pull-right">
+				<button class="btn btn-default" onclick="on()">All Filters</button>
+			</div>
+
+			<!--filters-->
+			<div class="filters">
+				<h2>Filters</h2>
+
+				<!--moods list-->
+				<ul class="moods">
+					<h3>Moods</h3>
+
+					<!-- night out -->
+					<!-- <li>
+						<div class="checkbox"> 
+							<input type="checkbox" id="nightout" class="checkbox" checked/>
+							<label for="nightout">
+								#night out
+							</label>
+							<button type="button" class="btn btn-default btn-xs">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+						</div> 
+					</li> --> <!-- night out -->
+					<!-- chill-->
+					<li id="chillout">
+						<div class="checkbox"> 
+							<input type="checkbox" id="chill" class="checkbox" checked/>
+							<label for="chill">
+								#chill
+							</label>
+							<button type="button" class="btn btn-default btn-xs">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+						</div> 
+					</li> <!-- chill -->
+					<!-- rebellious -->
+					<!-- <li>
+						<div class="checkbox"> 
+							<input type="checkbox" id="rebellious" class="checkbox" checked/>
+							<label for="rebellious">
+								#rebellious
+							</label>
+							<button type="button" class="btn btn-default btn-xs">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+						</div> 
+					</li>  --><!-- rebellious -->
+					<!-- 90's nostalgia -->
+					<!-- <li>
+						<div class="checkbox"> 
+							<input type="checkbox" id="90nostalgia" class="checkbox" checked/>
+							<label for="90nostalgia">
+								#90's nostalgia
+							</label>
+							<button type="button" class="btn btn-default btn-xs">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+						</div> 
+					</li> --> <!-- 90's nostalgia -->
+					<!-- happy -->
+					<!-- <li>
+						<div class="checkbox"> 
+							<input type="checkbox" id="happy" class="checkbox" checked/>
+							<label for="happy">
+								#happy
+							</label>
+							<button type="button" class="btn btn-default btn-xs">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+						</div> 
+					</li>  --><!-- happy -->
+					<!-- excited -->
+					<!-- <li> 
+						<div class="checkbox"> 
+							<input type="checkbox" id="excited" class="checkbox" checked/>
+							<label for="excited">
+								#excited
+							</label>
+							<button type="button" class="btn btn-default btn-xs">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+						</div> 
+					</li> --> <!-- excited -->
+					<!-- hangout -->
+					<!-- <li>
+						<div class="checkbox"> 
+							<input type="checkbox" id="hangout" class="checkbox" checked/>
+							<label for="hangout">
+								#hangout
+							</label>
+							<button type="button" class="btn btn-default btn-xs">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+						</div> 
+					</li> --> <!-- hangout -->
+					<!-- bar -->
+					<!-- <li> 
+						<div class="checkbox"> 
+							<input type="checkbox" id="bar" class="checkbox" checked/>
+							<label for="bar">
+								#bar
+							</label>
+							<button type="button" class="btn btn-default btn-xs">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+						</div> 
+					</li> --> <!-- bar -->
+					<!-- funtimes -->
+					<!-- <li>
+						<div class="checkbox"> 
+							<input type="checkbox" id="funtimes" class="checkbox" checked/>
+							<label for="funtimes">
+								#funtimes
+							</label>
+							<button type="button" class="btn btn-default btn-xs">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+						</div> 
+					</li> --> <!-- funtimes -->
+					<!-- wild -->
+					<!-- <li> 
+						<div class="checkbox"> 
+							<input type="checkbox" id="wild" class="checkbox" checked/>
+							<label for="wild">
+								#wild
+							</label>
+							<button type="button" class="btn btn-default btn-xs">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+						</div> 
+					</li> --> <!-- wild -->
+
+					<li>
+						<div class="more-tags">
+							<a href="#">More Tags</a>
+						</div>	
+					</li>
+				</ul> <!--moods list-->
+
+				<!-- genres list -->
+				<ul class="genres">
+					<h3>Genres</h3>
+
+					<!-- metal -->
+					<!-- <li> 
+						<div class="checkbox"> 
+							<input type="checkbox" id="metal" class="checkbox" checked/>
+							<label for="metal">
+								#metal
+							</label>
+							<button type="button" class="btn btn-default btn-xs">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+						</div> 
+					</li>  --><!-- metal -->
+					<!-- rock -->
+					<li id="Rock">
+						<div class="checkbox"> 
+							<input type="checkbox" id="rock" class="checkbox" checked/>
+							<label for="rock">
+								#rock
+							</label>
+							<button type="button" class="btn btn-default btn-xs">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+						</div> 
+					</li> <!-- rock -->
+					<!-- progressive -->
+					<!-- <li>
+						<div class="checkbox"> 
+							<input type="checkbox" id="progressive" class="checkbox" checked/>
+							<label for="progressive">
+								#progressive
+							</label>
+							<button type="button" class="btn btn-default btn-xs">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+						</div> 
+					</li> --> <!-- progressive -->
+					<!-- alternative -->
+					<!-- <li> 
+						<div class="checkbox"> 
+							<input type="checkbox" id="alternative" class="checkbox" checked/>
+							<label for="alternative">
+								#alternative
+							</label>
+							<button type="button" class="btn btn-default btn-xs">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+						</div> 
+					</li> --> <!-- alternative -->
+					<!-- hard rock -->
+					<!-- <li>
+						<div class="checkbox"> 
+							<input type="checkbox" id="hardrock" class="checkbox" checked/>
+							<label for="hardrock">
+								#hard rock
+							</label>
+							<button type="button" class="btn btn-default btn-xs">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+						</div> 
+					</li> --> <!-- hard rock -->
+					<li>
+						<div class="more-tags">
+							<a href="#">More Tags</a>
+						</div>	
+					</li>
+					
+				</ul> <!-- genres list -->
+
+			</div> <!--filters-->
+
+			<!-- collection -->
+			<div class="collection">
+
+				<!--recommendations-->
+				<div class="recommendations">
+					<div class="row">
+
+						<!--thumbnails-->
+						<ul class="thumbnails">
+							<h2>Recommendations</h2>
+							
+							<li class="btn-left"> <!--left navigation arrow button -->
+								<button type="button" class="btn btn-default btn-lg">
+									<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+								</button>	
+							</li> <!--left navigation arrow button -->
+							<li> <!--suburban-->
+								<div class="suburban">
+									<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+
+										<div class="thumbnail">
+						      				<img src="images/maxresdefault.jpg" alt="Suburban Sprawl">
+
+						      				<div class="tags">
+						      					<p> <em>#coffee  #chill  #content  #hangout #piano 
+						 							#jazz #blues #acoustic #pop
+						 							#wakeup #afternoon #winter
+						 							#Amy Whinehouse #Adele
+						 							#Cranberries #RadioHead
+						 							#Cristina Aguilera</em>
+						 						</p>
+						      				</div>
+
+							      			<div class="play">
+												<a href="productpage[nat].html">
+							      					<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+								    			</a>
+							      			</div>
+							      		</div>	
+
+					      				<div class="caption">
+					      					<h4>Suburban Sprawl by <a href="#">axel2457</a></h4>
+					      				</div>
+					      			</div>	
+								</div>
+							</li>  <!--suburban-->
+							<li> <!--down-->
+								<div class="down">
+									<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+
+										<div class="thumbnail">
+						      				<img src="images/Sad-Wallpaper-8.jpg" alt="When You're Down And Music Is The Only Thing That Can Lift You Up">
+
+						      				<div class="tags">
+						      					<p> <em>#coffee  #chill  #content  #hangout #piano 
+						 							#jazz #blues #acoustic #pop
+						 							#wakeup #afternoon #winter
+						 							#Amy Whinehouse #Adele
+						 							#Cranberries #RadioHead
+						 							#Cristina Aguilera</em>
+						 						</p>
+						      				</div>
+
+						      				<div class="play">
+												<a href="productpage[nat].html">
+						      						<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+							    				</a>
+						      				</div>
+						      			</div>	
+
+					      				<div class="caption">
+					      					<h4>
+					      						When You're Down And Music Is The Only Thing That Can Lift You Up by <a href="#">1dont3v3n</a>
+					      					</h4>
+					      				</div>
+					      			</div>	
+								</div>
+							</li>  <!--down-->
+							<li> <!--mycity-->
+								<div class="mycity">
+									<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+
+										<div class="thumbnail">
+						      				<img src="images/Wg54vSe.jpg" alt="My City">
+
+						      				<div class="tags">
+						      					<p> <em>#coffee  #chill  #content  #hangout #piano 
+						 							#jazz #blues #acoustic #pop
+						 							#wakeup #afternoon #winter
+						 							#Amy Whinehouse #Adele
+						 							#Cranberries #RadioHead
+						 							#Cristina Aguilera</em>
+						 						</p>
+						      				</div>
+
+							      			<div class="play">
+												<a href="productpage[nat].html">
+							      					<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+								    			</a>
+							      			</div>
+							      		</div>	
+
+					      				<div class="caption">
+					      					<h4>
+					      						My City by <a href="#">DeliriousBoy</a>
+					      					</h4>
+					      				</div>
+					      			</div>	
+								</div>
+							</li>  <!--mycity-->
+							<li> <!--swr-->
+								<div class="swr">
+									<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+
+										<div class="thumbnail">
+						      				<img src="images/this-is-forever-4e7528b2df0dd.jpg" alt="She Wants Revenge: Best Of">
+
+						      				<div class="tags">
+						      					<p> <em>#coffee  #chill  #content  #hangout #piano 
+						 							#jazz #blues #acoustic #pop
+						 							#wakeup #afternoon #winter
+						 							#Amy Whinehouse #Adele
+						 							#Cranberries #RadioHead
+						 							#Cristina Aguilera</em>
+						 						</p>
+						      				</div>
+
+						      				<div class="play">
+												<a href="productpage[nat].html">
+							      					<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+								    			</a>
+							      			</div>
+							      		</div>	
+
+					      				<div class="caption">
+					      					<h4>
+					      						She Wants Revenge: Best Of by <a href="#">NineniN</a>
+					      					</h4>
+					      				</div>
+					      			</div>	
+								</div>
+							</li>  <!--swr-->
+							<li> <!--pure morning-->
+								<div class="puremorning">
+									<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+
+										<div class="thumbnail">
+						      				<img src="images/placebo_without_you_i_am_nothing-5bfront5d-5bwww-freecovers-net5d.jpg" alt="Pure Morning">
+
+						      				<div class="tags">
+						      					<p> <em>#coffee  #chill  #content  #hangout #piano 
+						 							#jazz #blues #acoustic #pop
+						 							#wakeup #afternoon #winter
+						 							#Amy Whinehouse #Adele
+						 							#Cranberries #RadioHead
+						 							#Cristina Aguilera</em>
+						 						</p>
+						      				</div>
+
+							      			<div class="play">
+												<a href="productpage[nat].html">
+							      					<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+								    			</a>
+							      			</div>
+							      		</div>
+
+					      				<div class="caption">
+					      					<h4>
+					      						Pure Morning by <a href="#">A66dictionFr34ck</a>
+					      					</h4>
+					      				</div>
+					      			</div>	
+								</div>
+							</li>  <!--pure morning-->
+							<li> <!--coffee time-->
+								<div class="coffeetime">
+									<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+
+										<div class="thumbnail">
+					      					<img src="images/coffee_and_cigarettes_by_kukuruki.jpg" alt="Coffee Time - Alternative Rock Edition">
+
+						      				<div class="tags">
+						      					<p> <em>#coffee  #chill  #content  #hangout #piano 
+						 							#jazz #blues #acoustic #pop
+						 							#wakeup #afternoon #winter
+						 							#Amy Whinehouse #Adele
+						 							#Cranberries #RadioHead
+						 							#Cristina Aguilera</em>
+						 						</p>
+						      				</div>
+
+							      			<div class="play">
+												<a href="productpage[nat].html">
+							      					<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+								    			</a>
+							      			</div>
+							      		</div>
+
+					      				<div class="caption">
+					      					<h4>
+					      						Coffee Time - Alternative Rock Edition by <a href="#">ThatIdiotWithTheLongUsername</a>
+					      					</h4>
+					      				</div>
+					      			</div>	
+								</div>
+							</li>  <!--coffeetime-->
+							<li class="btn-right"> <!--right navigation arrow button-->
+								<button type="button" class="btn btn-default btn-lg">
+									<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+								</button>	
+							</li> <!--right navigation arrow button -->
+
+						</ul> <!--thumbnails-->	
+					</div>
+				</div> <!--recommendations-->
+
+				<!--favourites-->
+				<div class="favourites">
+					<div class="row">
+
+						<!--thumbnails-->
+						<ul class="thumbnails">
+							<h2>Favourites</h2>
+							
+							<li class="btn-left"> <!--left navigation arrow button -->
+								<button type="button" class="btn btn-default btn-lg">
+									<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+								</button>	
+							</li> <!--left navigation arrow button -->
+							<li> <!--altrock-->
+								<div class="altrock">
+									<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+
+										<div class="thumbnail">
+						      				<img src="images/alt.png" alt="Alternative Rock">
+
+						      				<div class="tags">
+						      					<p> <em>#coffee  #chill  #content  #hangout #piano 
+						 							#jazz #blues #acoustic #pop
+						 							#wakeup #afternoon #winter
+						 							#Amy Whinehouse #Adele
+						 							#Cranberries #RadioHead
+						 							#Cristina Aguilera</em>
+						 						</p>
+						      				</div>
+
+							      			<div class="play">
+												<a href="productpage[nat].html">
+							      					<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+								    			</a>
+							      			</div>
+							      		</div>	
+
+					      				<div class="caption">
+					      					<h4>Alternative Rock by <a href="#">erik010101101</a></h4>
+					      				</div>
+					      			</div>	
+								</div>
+							</li>  <!--altrock-->
+							<li> <!--ayreon-->
+								<div class="ayreon">
+									<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+
+										<div class="thumbnail">
+						      				<img src="images/174499.jpg" alt="Ayreon Compilation">
+
+						      				<div class="tags">
+						      					<p> <em>#coffee  #chill  #content  #hangout #piano 
+						 							#jazz #blues #acoustic #pop
+						 							#wakeup #afternoon #winter
+						 							#Amy Whinehouse #Adele
+						 							#Cranberries #RadioHead
+						 							#Cristina Aguilera</em>
+						 						</p>
+						      				</div>
+
+						      				<div class="play">
+												<a href="productpage[nat].html">
+						      						<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+							    				</a>
+						      				</div>
+						      			</div>	
+
+					      				<div class="caption">
+					      					<h4>
+					      						Ayreon Compilation by <a href="#">steveBg</a>
+					      					</h4>
+					      				</div>
+					      			</div>	
+								</div>
+							</li>  <!--ayreon-->
+							<li> <!--forever-->
+								<div class="forever">
+									<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+
+										<div class="thumbnail">
+						      				<img src="images/this-is-forever-4e7528b2df0dd.jpg" alt="This Is Forever">
+
+						      				<div class="tags">
+						      					<p> <em>#coffee  #chill  #content  #hangout #piano 
+						 							#jazz #blues #acoustic #pop
+						 							#wakeup #afternoon #winter
+						 							#Amy Whinehouse #Adele
+						 							#Cranberries #RadioHead
+						 							#Cristina Aguilera</em>
+						 						</p>
+						      				</div>
+
+							      			<div class="play">
+												<a href="productpage[nat].html">
+							      					<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+								    			</a>
+							      			</div>
+							      		</div>	
+
+					      				<div class="caption">
+					      					<h4>
+					      						This Is Forever by <a href="#">She Wants Revenge</a>
+					      					</h4>
+					      				</div>
+					      			</div>	
+								</div>
+							</li>  <!--forever-->
+							<li> <!--eatme-->
+								<div class="eatme">
+									<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+
+										<div class="thumbnail">
+						      				<img src="images/eat-me-drink-me.jpg" alt="Eat Me, Drink Me">
+
+						      				<div class="tags">
+						      					<p> <em>#coffee  #chill  #content  #hangout #piano 
+						 							#jazz #blues #acoustic #pop
+						 							#wakeup #afternoon #winter
+						 							#Amy Whinehouse #Adele
+						 							#Cranberries #RadioHead
+						 							#Cristina Aguilera</em>
+						 						</p>
+						      				</div>
+
+						      				<div class="play">
+												<a href="productpage[nat].html">
+							      					<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+								    			</a>
+							      			</div>
+							      		</div>	
+
+					      				<div class="caption">
+					      					<h4>
+					      						Eat Me, Drink Me by <a href="#">Merilyn Manson</a>
+					      					</h4>
+					      				</div>
+					      			</div>	
+								</div>
+							</li>  <!--eatme-->
+							<li> <!--progresstination-->
+								<div class="progresstination">
+									<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+
+										<div class="thumbnail">
+						      				<img src="images/2e6ecc34890937.56060d3ae40f8.jpg" alt="Progresstination">
+
+						      				<div class="tags">
+						      					<p> <em>#coffee  #chill  #content  #hangout #piano 
+						 							#jazz #blues #acoustic #pop
+						 							#wakeup #afternoon #winter
+						 							#Amy Whinehouse #Adele
+						 							#Cranberries #RadioHead
+						 							#Cristina Aguilera</em>
+						 						</p>
+						      				</div>
+
+							      			<div class="play">
+												<a href="productpage[nat].html">
+							      					<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+								    			</a>
+							      			</div>
+							      		</div>
+
+					      				<div class="caption">
+					      					<h4>
+					      						Progresstination by <a href="#">coco_nuts</a>
+					      					</h4>
+					      				</div>
+					      			</div>	
+								</div>
+							</li>  <!--progresstination-->
+							<li> <!--longtitle-->
+								<div class="longtitle">
+									<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+
+										<div class="thumbnail">
+					      					<img src="images/maxresdefault25.jpg" alt="Alternative/Progressive/Post-Punk/Rock/Metal Compilation">
+
+						      				<div class="tags">
+						      					<p> <em>#coffee  #chill  #content  #hangout #piano 
+						 							#jazz #blues #acoustic #pop
+						 							#wakeup #afternoon #winter
+						 							#Amy Whinehouse #Adele
+						 							#Cranberries #RadioHead
+						 							#Cristina Aguilera</em>
+						 						</p>
+						      				</div>
+
+							      			<div class="play">
+												<a href="productpage[nat].html">
+							      					<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+								    			</a>
+							      			</div>
+							      		</div>
+
+					      				<div class="caption">
+					      					<h4>
+					      						Alternative/Progressive/Post-Punk/Rock/Metal Compilation by <a href="#">That_Idiot_With_The_Longest_Username_in_the_World</a>
+					      					</h4>
+					      				</div>
+					      			</div>	
+								</div>
+							</li>  <!--longtitle-->
+							<li class="btn-right"> <!--right navigation arrow button-->
+								<button type="button" class="btn btn-default btn-lg">
+									<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+								</button>	
+							</li> <!--right navigation arrow button -->
+
+						</ul> <!--thumbnails-->	
+					</div>
+					
+				</div> <!--favourites-->
+
+				<!--myplaylists-->
+				<div class="myplaylists">
+					<div class="row">
+
+						<!--thumbnails-->
+						<ul class="thumbnails">
+							<h2>My Playlists</h2>
+							
+							<li class="btn-left"> <!--left navigation arrow button -->
+								<button type="button" class="btn btn-default btn-lg">
+									<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+								</button>	
+							</li> <!--left navigation arrow button -->
+							<li> <!--create-->
+								<div class="create">
+									<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+
+										<div class="thumbnail">
+
+							      			<div class="plus">
+												<a href="#">
+							      					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+								    			</a>
+							      			</div>
+							      		</div>	
+
+					      				<div class="caption">
+					      					<h4>Create Playlist</h4>
+					      				</div>
+					      			</div>	
+								</div>
+							</li>  <!--create-->
+							<li> <!--nineties-->
+								<div class="nineties">
+									<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+
+										<div class="thumbnail">
+						      				<img src="images/yase7uxuji8qki3sq6ga_400x400.jpeg" alt="90's Reminiscence">
+
+						      				<div class="tags">
+						      					<p> <em>#coffee  #chill  #content  #hangout #piano 
+						 							#jazz #blues #acoustic #pop
+						 							#wakeup #afternoon #winter
+						 							#Amy Whinehouse #Adele
+						 							#Cranberries #RadioHead
+						 							#Cristina Aguilera</em>
+						 						</p>
+						      				</div>
+
+						      				<div class="play">
+												<a href="productpage[nat].html">
+						      						<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+							    				</a>
+						      				</div>
+						      			</div>	
+
+					      				<div class="caption">
+					      					<h4>
+					      						90's Reminiscence by <a href="#">Team25</a>
+					      					</h4>
+					      				</div>
+					      			</div>	
+								</div>
+							</li>  <!--nineties-->
+							<li> <!--discoveries-->
+								<div class="discoveries">
+									<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+
+										<div class="thumbnail">
+						      				<img src="images/She-Wants-Revenge-Valleyheart.jpg" alt="Latest Discoveries">
+
+						      				<div class="tags">
+						      					<p> <em>#coffee  #chill  #content  #hangout #piano 
+						 							#jazz #blues #acoustic #pop
+						 							#wakeup #afternoon #winter
+						 							#Amy Whinehouse #Adele
+						 							#Cranberries #RadioHead
+						 							#Cristina Aguilera</em>
+						 						</p>
+						      				</div>
+
+							      			<div class="play">
+												<a href="productpage[nat].html">
+							      					<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+								    			</a>
+							      			</div>
+							      		</div>	
+
+					      				<div class="caption">
+					      					<h4>
+					      						Latest Discoveries by <a href="#">Team25</a>
+					      					</h4>
+					      				</div>
+					      			</div>	
+								</div>
+							</li>  <!--discoveries-->
+							<li> <!--thegathering-->
+								<div class="thegathering">
+									<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+
+										<div class="thumbnail">
+						      				<img src="images/114790340.jpg" alt="The Gathering Best Of 1996-2007">
+
+						      				<div class="tags">
+						      					<p> <em>#coffee  #chill  #content  #hangout #piano 
+						 							#jazz #blues #acoustic #pop
+						 							#wakeup #afternoon #winter
+						 							#Amy Whinehouse #Adele
+						 							#Cranberries #RadioHead
+						 							#Cristina Aguilera</em>
+						 						</p>
+						      				</div>
+
+						      				<div class="play">
+												<a href="productpage[nat].html">
+							      					<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+								    			</a>
+							      			</div>
+							      		</div>	
+
+					      				<div class="caption">
+					      					<h4>
+					      						The Gathering Best Of 1996-2007 by <a href="#">Team25</a>
+					      					</h4>
+					      				</div>
+					      			</div>	
+								</div>
+							</li>  <!--thegathering-->
+							<li> <!--synthtwist-->
+								<div class="synthtwist">
+									<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+
+										<div class="thumbnail">
+						      				<img src="images/resistance-extralarge_1303514135441.jpg" alt="Alternative With A Synth Twist">
+
+						      				<div class="tags">
+						      					<p> <em>#coffee  #chill  #content  #hangout #piano 
+						 							#jazz #blues #acoustic #pop
+						 							#wakeup #afternoon #winter
+						 							#Amy Whinehouse #Adele
+						 							#Cranberries #RadioHead
+						 							#Cristina Aguilera</em>
+						 						</p>
+						      				</div>
+
+							      			<div class="play">
+												<a href="productpage[nat].html">
+							      					<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+								    			</a>
+							      			</div>
+							      		</div>
+
+					      				<div class="caption">
+					      					<h4>
+					      						Alternative With A Synth Twist by <a href="#">Team25</a>
+					      					</h4>
+					      				</div>
+					      			</div>	
+								</div>
+							</li>  <!--synthtwist-->
+							<li> <!--oldgold-->
+								<div class="oldgold">
+									<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+
+										<div class="thumbnail">
+					      					<img src="images/wallpaper1-from-www-muypunk-com-siouxsie-and-the-banshees-4032760-1024-768.jpg" alt="Old But Gold">
+
+						      				<div class="tags">
+						      					<p> <em>#coffee  #chill  #content  #hangout #piano 
+						 							#jazz #blues #acoustic #pop
+						 							#wakeup #afternoon #winter
+						 							#Amy Whinehouse #Adele
+						 							#Cranberries #RadioHead
+						 							#Cristina Aguilera</em>
+						 						</p>
+						      				</div>
+
+							      			<div class="play">
+												<a href="productpage[nat].html">
+							      					<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+								    			</a>
+							      			</div>
+							      		</div>
+
+					      				<div class="caption">
+					      					<h4>
+					      						Old But Gold by <a href="#">Team25</a>
+					      					</h4>
+					      				</div>
+					      			</div>	
+								</div>
+							</li>  <!--oldgold-->
+							<li class="btn-right"> <!--right navigation arrow button-->
+								<button type="button" class="btn btn-default btn-lg">
+									<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+								</button>	
+							</li> <!--right navigation arrow button -->
+
+						</ul> <!--thumbnails-->	
+					</div>
+				</div> <!--myplaylists-->
+			</div> <!-- collection -->
+
+
+
+		</div> <!-- wrapper -->
+
+		<!--Footer-->
+		<footer class="footer">
+			<div class="row">
+				<ul class="social"> <!--social-->
+					<li>
+						<div class="facebook"> <!--facebook-->
+								<a href="#" class="thumbnail">
+									<img src="images/697057-facebook-512.png" alt="Facebook">
+								</a>
+						</div> <!--facebook-->
+					</li>
+					<li>
+						<div class="twitter"> <!--twitter-->
+								<a href="#" class="thumbnail">
+									<img src="images/697029-twitter-512.png" alt="Twitter">
+								</a>
+						</div> <!--twitter-->
+					</li>
+					<li>
+						<div class="youtube"> <!--youtube-->
+								<a href="#" class="thumbnail">
+									<img src="images/95565_yt_512x512.png" alt="Youtube">
+								</a>
+						</div> <!--youtube-->
+					</li>
+					<li>
+						<div class="instagram"> <!--instagram-->
+								<a href="#" class="thumbnail">
+									<img src="images/697067-instagram-512.png" alt="Instagram">
+								</a>
+						</div> <!--instagram-->
+					</li>
+				</ul> <!--social-->
+
+				<!--music widget -->
+				<div class="widget">
+					<div class="title">
+						<div class="music-icon-left">
+							<span class="glyphicon glyphicon-music"></span>
+						</div>
+						<div class="song-title">
+							<a href="productpage[nat].html"><h4><strong>I Want To Kill You Like They Do In The Movies</strong></h4></a>
+						</div>
+						<div class="music-icon-right">
+							<span class="glyphicon glyphicon-music"></span>
+						</div>
+					</div>
+
+					<div class="player-icons">
+						<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+					</div>	
+				</div> <!-- music widget-->
+
+				<ul class="language"> <!-- language -->
+					<li>
+						<div class="english"> <!-- english -->
+							<img src="images/English_Flag_Language.png" alt="English">
+						</div> <!-- english -->
+					</li>
+					<li>
+						<div class="greek"> <!-- greek -->
+							<img src="images/greece_640.png" alt="Greek" class="opaque">
+						</div> <!-- greek -->
+					</li>
+				</ul> <!-- language -->
+			</div>
+		</footer>
+		
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<script>
+			function on() {
+    			document.getElementById("overlay").style.display = "block";
+			}
+
+			function off() {
+    			document.getElementById("overlay").style.display = "none";
+			}
+
+			$(document).on('click', 'button.btn-xs', function(){
+				$(this).closest('span.label-default').remove();
+			});
+
+			$(document).on('click', 'button.btn-default', function(){
+				$(this).closest('.checkbox').remove();
+			});
+
+			$(".player-icons .glyphicon-play-circle").click(function() {
+				$(this).toggleClass("glyphicon glyphicon-play-circle glyphicon glyphicon-pause");
+			});
+
+			$(".glyphicon-heart").click(function () {
+				$(this).toggleClass("clicked");
+			});
+
+			$(".language img").click(function() {
+				$(this).parent().find("img").toggleClass("opaque");
+			});
+
+			$("#chillout").hide();
+			$("#chilloutchosen").hide();
+			$("#Rock").hide();
+			$("#rockchosen").hide();
+
+			$("#chillouttrigger").click(function() {
+				if( $(this).is(":checked")) {
+					$("#chillout").toggle();
+					$("#chilloutchosen").toggle();
+				}else{
+					$("#chillout").toggle();
+					$("#chilloutchosen").toggle();
+				}
+			});
+
+
+			$("#rocktrigger").click(function() {
+				if( $(this).is(":checked")) {
+					$("#Rock").toggle();
+					$("#rockchosen").toggle();
+				}else{
+					$("#Rock").toggle();
+					$("#rockchosen").toggle();
+				}
+			});
+
+		</script>
+	</body>
+</html>	
